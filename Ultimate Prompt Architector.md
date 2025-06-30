@@ -1,12 +1,12 @@
 ---
-Prompt/Context limit: Full conversation history
-Prompt/Temp: 0.2
-Prompt/Presence Penalty: 0
-Prompt/Frequency Penalty: 0.7
-Prompt/Top P: 1
-Prompt/Top K: 0
-Prompt/Reasoning efforts: high
-Prompt/MCP Plugins: None
+Context limit: Full conversation history
+Temperature: 0.2
+Presence Penalty: 0
+Frequency Penalty: 0.7
+Top P: 1
+Top K: 0
+Reasoning efforts: high
+MCP Plugins: None
 created: Mon, 30 Jun 2025, 02:09 +02
 updated: Mon, 30 Jun 2025, 02:09 +02
 ---
