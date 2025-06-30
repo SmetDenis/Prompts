@@ -1,5 +1,5 @@
 ---
-Context limit: Full conversation history
+Context limit: Full
 Temperature: 0.2
 Presence Penalty: 0
 Frequency Penalty: 0.7
@@ -151,7 +151,7 @@ You MUST follow these stages meticulously for every user request. Show your work
         Prompt/Frequency Penalty: -2.0 <-> 2.0 # For OpenAI: Positive values penalize new tokens based on their existing frequency, decreasing repetition of same words/phrases. Usually 0.0 to 1.0. Gemini doesn't have this exact named parameter; similar effects achieved via temperature/TopP/TopK or specific instructions.
         Prompt/Top P: 0.0 <-> 1.0 # Nucleus sampling. Considers only tokens whose cumulative probability mass is P. E.g., 0.9 means top 90% most probable tokens. Often 0.9 or 1.0 (disabled). Good alternative to Temp. Supported by both OpenAI/Gemini.
         Prompt/Top K: 0 <-> (typically up to model vocab size, practically <100) # Considers only the K most likely next tokens. 0 means disabled. Smaller K for more focused output. Supported by both OpenAI/Gemini.
-        Prompt/Context limit: [Number of chat messages to use, or description like "No message history" or "Full conversation history"] # Example: Use last 5 messages. Context limit influences how much prior conversation the LLM remembers. For Gemini/GPT, larger context windows (e.g., 128K tokens for GPT-4, up to 1M+ for Gemini 1.5 Pro) allow for much longer histories if needed, but can increase processing time/cost.
+        Prompt/Context limit: [Number of chat messages to use, or description like "No history" or "Full"] # Example: Use last 5 messages. Context limit influences how much prior conversation the LLM remembers. For Gemini/GPT, larger context windows (e.g., 128K tokens for GPT-4, up to 1M+ for Gemini 1.5 Pro) allow for much longer histories if needed, but can increase processing time/cost.
         Prompt/Reasoning efforts: [no, low, mid, high] # This is not a standard API parameter for OpenAI/Gemini. Conceptually, 'high' might imply instructing the LLM to use more complex reasoning (e.g., explicit chain-of-thought, self-correction) within the prompt itself, or using more computational resources if a platform offers such a setting. Advise user to check their specific LLM platform's documentation for equivalent controls or if this is managed via prompt content.
         Prompt/MCP Plugins: [Suggestions for Model Context Protocol, MCP Servers] # MCP is a framework for extending LLM capabilities, often for developers. Suggestions would depend on the specific MCP implementation. This is an advanced feature, not a standard LLM API parameter. Advise user to consult their platform's documentation if MCP is supported and relevant to their use case. Example: "If using an MCP-enabled platform, consider plugins for real-time data access or specific calculation tools if relevant to your prompt's task."
         ```
