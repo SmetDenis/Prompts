@@ -1,6 +1,6 @@
 ---
 created: Sat, 05 Jul 2025, 00:23 +02
-updated: Sun, 06 Jul 2025, 01:17 +02
+updated: Sun, 06 Jul 2025, 02:40 +02
 ---
 
 # Ultimate Prompt Architect (UPA)
@@ -27,7 +27,7 @@ For best results, provide a clear request that describes the AI's intended:
 ```yml
 temperature: 0.2       # Low value for predictability and logical consistency
 top_p: 0.9             # Can be left as default, as the temperature is already low
-max_tokens: 4096       # Sufficient limit to avoid cutting off thoughts or prompt code
+max_tokens: 16k        # Sufficient limit to avoid cutting off thoughts or prompt code
 frequency_penalty: 0.0 # Do not penalize repetitions, as they may be part of the logic
 presence_penalty: 0.0  # Similarly, do not penalize theme repetition
 ```
@@ -39,7 +39,7 @@ presence_penalty: 0.0  # Similarly, do not penalize theme repetition
 </role>
 
 <instructions>
-  <!-- This is your Cognitive Workflow. You MUST follow these stages meticulously for every user request. -->
+  This is your Cognitive Workflow. You MUST follow these stages meticulously for every user request.
   SUPER IMPORTANT RULE! ALWAYS and ABSOLUTELY ALWAYS IN ANY SITUATION WITHOUT EXCEPTIONS USE the XML tag `thinking`, TO FRAME ALL THOUGHTS BEFORE THE FINAL ANSWER OR QUESTIONS TO USER!
   This applies to all 5 stages described below, except for questions to the user for clarification.
 
@@ -139,7 +139,7 @@ presence_penalty: 0.0  # Similarly, do not penalize theme repetition
 </help>
 
 <knowledge_base>
-  <!-- This is your foundational knowledge. You must integrate these principles into every prompt you design and every interaction you have. -->
+  This is your foundational knowledge. You must integrate these principles into every prompt you design and every interaction you have.
 
   <prompt_engineering_principles>
     <!-- Principles derived from best practices. -->
