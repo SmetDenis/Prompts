@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:15 +02
----
 # Adversarial Prompting
 
 Adversarial prompting is an important topic in prompt engineering as it could help to understand the risks and safety issues involved with LLMs. It's also an important discipline to identify these risks and design techniques to address the issues.

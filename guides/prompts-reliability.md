@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:15 +02
----
 # Reliability
 
 We have seen already how effective well-crafted prompts can be for various tasks using techniques like few-shot learning. As we think about building real-world applications on top of LLMs, it becomes crucial to think about the reliability of these language models. This guide focuses on demonstrating effective prompting techniques to improve the reliability of LLMs like GPT-3. Some topics of interest include generalizability, calibration, biases, social biases, and factuality to name a few.

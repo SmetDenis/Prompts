@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:16 +02
----
 # Advanced Prompting
 
 By this point, it should be obvious that it helps to improve prompts to get better results on different tasks. That's the whole idea behind prompt engineering.

@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:14 +02
----
 # Guides 🔮
 
 The following are a set of guides on prompt engineering developed by us (DAIR.AI). Guides are work in progress.

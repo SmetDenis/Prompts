@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:15 +02
----
 # Miscellaneous Topics
 
 In this section, we discuss other miscellaneous and uncategorized topics in prompt engineering. It includes relatively new ideas and approaches that will eventually be moved into the main guides as they become more widely adopted. This section of the guide is also useful to keep up with the latest research papers on prompt engineering.

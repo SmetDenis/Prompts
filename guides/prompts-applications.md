@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:16 +02
----
 # Prompt Applications
 
 In this guide, we will cover some advanced and interesting ways we can use prompt engineering to perform useful and more advanced tasks.

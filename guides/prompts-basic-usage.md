@@ -1,7 +1,3 @@
----
-created: Mon, 09 Jun 2025, 16:29 +02
-updated: Mon, 30 Jun 2025, 02:15 +02
----
 # Basic Prompting
 
 In the previous guide, we introduced and gave a basic example of a prompt.
