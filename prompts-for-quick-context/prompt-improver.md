@@ -52,7 +52,7 @@ I want to make my prompt better, stricter, and so that it conforms to best pract
 
 ## Recommended LLM settings
 
-```yml
+\`\`\`yml
 [key: value # Explanation]
 [key: value # Explanation]
 ...
