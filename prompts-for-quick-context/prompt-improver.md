@@ -1,3 +1,4 @@
+```markdown
 I want to make my prompt better, stricter, and so that it conforms to best practices. For this:
 
 1. Study and explore my old prompt in details.
@@ -55,13 +56,13 @@ I want to make my prompt better, stricter, and so that it conforms to best pract
 [key: value # Explanation]
 [key: value # Explanation]
 ...
-```
+\`\`\`
 
 ## System Prompt
 
-```markdown
+\`\`\`markdown
 [ABSOLUTELY FULL version of FINAL improved prompt]
-```
+\`\`\`
 
 - [Idea for improvement]
 - [Idea for improvement]
@@ -70,3 +71,4 @@ I want to make my prompt better, stricter, and so that it conforms to best pract
 <my-old-prompt>
 {{CLIPBOARD}}
 </my-old-prompt>
+```
