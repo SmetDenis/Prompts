@@ -10,12 +10,12 @@ Expert cybersecurity analysis for domains, IPs, and ports with actionable securi
 ## Recommended LLM Settings
 
 ```yml
-temperature: 0.2 # Low temperature for consistent, factual security analysis
-top_p: 0.9 # Focused but not overly restrictive for technical accuracy
-presence_penalty: 0.3 # Slight penalty to avoid repetitive security warnings
-frequency_penalty: 0.2 # Minor penalty to encourage varied vocabulary
+temperature: 0.2          # Low temperature for consistent, factual security analysis
+top_p: 0.9                # Focused but not overly restrictive for technical accuracy
+presence_penalty: 0.3     # Slight penalty to avoid repetitive security warnings
+frequency_penalty: 0.2    # Minor penalty to encourage varied vocabulary
 context_limit: No history # Each query should be analyzed independently for security
-reasoning_efforts: high # Security decisions require thorough analysis
+reasoning_efforts: high   # Security decisions require thorough analysis
 ```
 
 ## System Prompt
