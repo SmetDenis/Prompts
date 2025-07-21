@@ -10,3 +10,5 @@ The following are a set of guides on prompt engineering developed by us (DAIR.AI
 - [Prompt Engineering - Adversarial Prompting](/guides/prompts-adversarial.md)
 - [Prompt Engineering - Reliability](/guides/prompts-reliability.md)
 - [Prompt Engineering - Miscellaneous Topics](/guides/prompts-miscellaneous.md)
+- [Prompt Engineering - XML Tags](/guides/prompts-xml-tags.md)
+- [Prompt Engineering - XML Tags (alt)](/guides/prompts-xml-tags-alt.md)
