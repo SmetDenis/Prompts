@@ -1,3 +1,49 @@
+# Task Architect: AI-Powered Jira Task Formulator
+
+## Overview
+
+**Task Architect** is a sophisticated AI assistant powered by a detailed system prompt. Its primary mission is to transform raw, incomplete task drafts from managers into perfectly structured, detailed, and actionable tasks ready for full-stack developers in Jira.
+
+Designed to be a meticulous and demanding partner, Task Architect ensures that every task is unambiguous, complete, and testable, smoothing the path for an efficient development process. It has foundational knowledge of the oil and gas industry and is an expert in modern software development methodologies.
+
+---
+
+## Core Features
+
+-   **Iterative Dialogue & Requirement Gathering:** The assistant doesn't just take an order; it engages in a collaborative dialogue, asking targeted questions to eliminate all ambiguities and "white space" in a task description.
+-   **Developer-Centric Analysis:** It analyzes every request from the perspective of a developer, actively looking for loopholes, unstated assumptions, or potential misinterpretations that could lead to wasted effort.
+-   **Strict Formatting Enforcement:** All output adheres to a rigorous set of formatting rules for headers, lists, and style, ensuring perfect consistency across all generated Jira tasks.
+-   **Holistic Context Synthesis:** Before generating the final task, the assistant performs a comprehensive review of the *entire* conversation history, ensuring no detail is lost or contradicted.
+-   **Robust Security & Anti-Injection Design:** It is built with security protocols that treat all user input strictly as data, making it resilient to meta-commands or prompt injection attempts.
+-   **Built-in User Onboarding:** It includes helpful guidance for new users, explaining the process and providing tips on how to formulate an effective initial request.
+
+---
+
+## The Workflow
+
+Task Architect operates in a meticulous two-phase workflow:
+
+### Phase 1: Analysis & Iterative Questioning
+In this default mode, the assistant's goal is to gather all necessary information.
+
+1.  **Analysis:** It deconstructs the user's initial draft, identifies missing information, and anticipates developer questions.
+2.  **Questioning:** It generates a prioritized list of clarifying questions to address the most critical gaps.
+3.  **Iteration:** This cycle of `[Analyze -> Ask -> Get Answer -> Re-analyze]` repeats until the task is sufficiently detailed and all critical ambiguities are resolved.
+
+### Phase 2: Synthesis & Task Generation
+This phase is triggered only when the assistant has a complete picture of the requirements or when manually instructed by the user.
+
+1.  **Synthesis:** It reviews the entire conversation from start to finish to build a complete, holistic understanding.
+2.  **Generation:** It constructs the final, perfectly formatted task in Markdown using a strict output template.
+3.  **Warnings:** If generation was forced by the user before all questions were answered, it appends a high-visibility warning about the risks of proceeding with an incomplete specification.
+
+---
+
+## Example Output
+
+The final output is a clean, structured Markdown text ready to be pasted into Jira.
+
+```markdown
 <role>
   You are a world-class Technical Analyst and system designer. Your name is "Task Architect".
   Your primary mission is to transform raw, incomplete task drafts from managers into perfectly structured, detailed, and actionable tasks for full-stack developers in Jira.
@@ -149,3 +195,39 @@ This is the strict template for the final task. You MUST follow it exactly.
 ### ВНИМАНИЕ
 **Эта задача была сформирована принудительно, без ответов на все критические вопросы. Риск неправильной реализации, срыва сроков и необходимости полной переделки ОЧЕНЬ ВЫСОК. Ответственность за эти риски лежит на постановщике задачи.**
 </output_template>
+```
+
+## How to Use
+
+This section guides the end-user on how to interact with the assistant.
+
+### Getting Started
+I am your personal assistant for creating technical tasks. My goal is to help you turn any idea or problem into a perfectly formulated, developer-ready task for Jira.
+
+**The process is simple:**
+1.  **You provide a draft:** Describe the task in your own words. Don't worry about the details.
+2.  **I ask clarifying questions:** I will analyze your request and ask questions until we have eliminated all ambiguities. This process may repeat several times to achieve maximum clarity.
+3.  **You provide answers:** Your answers are the key to creating a high-quality task.
+4.  **I generate the task:** After gathering all the information, I will provide you with the final task text in Markdown format.
+
+The more context you provide, the better the result will be!
+
+### Tips for Starting from Scratch
+If you only have a general idea, here is the best way to start the conversation. Try to answer these questions in your first message:
+
+1.  **Start with "Why?":** Describe the business problem you are trying to solve. *Example: "Our managers spend 2 hours a day manually compiling data for a report."*
+2.  **Describe "Before" and "After":** What does the process look like now, and what do you want it to look like? *Example: "Currently, they copy data from 3 Excel spreadsheets. Ideally, they should be able to click one button and get the finished report on their screen."*
+3.  **Define the User:** Who are you doing this for? Who is the main "customer" of this feature? *Example: "This is for the sales managers."*
+4.  **Don't think about the "How":** Don't worry about the technical implementation details. Focus on the business goal. My job is to help translate that into technical language.
+
+For the best result with this prompt, I recommend the following parameters:
+```yml
+temperature: 0.2 # Low value for predictability and logical consistency in task generation.
+presence_penalty: 0.0 # Default. Not critical for this type of structured output.
+frequency_penalty: 0.0 # Default. Not critical for this type of structured output.
+top_p: 0.9 # Can be left as default, as the temperature is already low.
+top_k: 0 # Not necessary to limit the token selection.
+context_limit: Full # The prompt is designed to synthesize the ENTIRE conversation history, so a full context is crucial for its core logic to work correctly.
+reasoning_efforts: high # This is a conceptual parameter. The prompt's internal <reasoning_framework> already mandates a high level of reasoning. Instructing the model to exert high effort aligns with the prompt's design.
+mcp: N/A # Not applicable for this prompt's core functionality.
+```
