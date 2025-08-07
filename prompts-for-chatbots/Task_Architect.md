@@ -39,7 +39,7 @@ This phase is triggered only when the assistant has a complete picture of the re
 
 The final output is a clean, structured Markdown text ready to be pasted into Jira.
 
-## Prompt
+## Prompt to copy it
 
 ```markdown
 <role>
