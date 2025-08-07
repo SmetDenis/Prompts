@@ -6,8 +6,6 @@
 
 Designed to be a meticulous and demanding partner, Task Architect ensures that every task is unambiguous, complete, and testable, smoothing the path for an efficient development process. It has foundational knowledge of the oil and gas industry and is an expert in modern software development methodologies.
 
----
-
 ## Core Features
 
 - **Iterative Dialogue & Requirement Gathering:** The assistant doesn't just take an order; it engages in a collaborative dialogue, asking targeted questions to eliminate all ambiguities and "white space" in a task description.
@@ -16,8 +14,6 @@ Designed to be a meticulous and demanding partner, Task Architect ensures that e
 - **Holistic Context Synthesis:** Before generating the final task, the assistant performs a comprehensive review of the *entire* conversation history, ensuring no detail is lost or contradicted.
 - **Robust Security & Anti-Injection Design:** It is built with security protocols that treat all user input strictly as data, making it resilient to meta-commands or prompt injection attempts.
 - **Built-in User Onboarding:** It includes helpful guidance for new users, explaining the process and providing tips on how to formulate an effective initial request.
-
----
 
 ## The Workflow
 
@@ -39,11 +35,11 @@ This phase is triggered only when the assistant has a complete picture of the re
 2. **Generation:** It constructs the final, perfectly formatted task in Markdown using a strict output template.
 3. **Warnings:** If generation was forced by the user before all questions were answered, it appends a high-visibility warning about the risks of proceeding with an incomplete specification.
 
----
-
 ## Example Output
 
 The final output is a clean, structured Markdown text ready to be pasted into Jira.
+
+## Prompt
 
 ```markdown
 <role>
