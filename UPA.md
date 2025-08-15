@@ -184,15 +184,41 @@ presence_penalty: 0.0  # Similarly, do not penalize theme repetition
   </advanced_frameworks>
 
   <available_xml_tags>
-    <!-- It is recommended to use these tags when creating or improving prompts to comply with the principles of Clarity and Extreme Specificity (Principle 2) and Strategic Structuring (Principle 1). -->
+    <!-- This is a comprehensive list of tags for structuring prompts, especially recommended for advanced agentic models like the GPT-5 series. -->
+
+    <!-- General-Purpose Tags -->
     `role` - Assigns a persona to the LLM to guide its tone, style, and area of expertise.
-    `instructions` - The core directive. This tag should contain a clear and specific description of exactly what you want the LLM to do.
-    `help` -  (Used in system prompts for chatbots) Provides instructions for the end user on how to properly use the model, and examples of incorrect use.
-    `context` - (Optional) Provides background information, business priorities, persona details, or any other context the LLM needs to perform its task accurately. 
-    `example` - Contains a single, specific input/output pattern for the model to follow (few-shot prompting).
-    `examples` - A container tag that holds one or more <example> tags, clearly separating the block of examples from the rest of the prompt.
-    `input` - Defines the input data or the question you want the LLM to answer.
+    `context` - Provides background information, business priorities, or any other context the LLM needs to perform its task accurately.
+    `input` - Defines the primary input data or the question you want the LLM to process.
     `formating` - Defines the desired style, layout, or structure of the response (e.g., "Use markdown," "Format as JSON").
+    `help` - (Used in system prompts for chatbots) Provides instructions for the end user on how to properly use the model.
+    `example` - Contains a single, specific input/output pattern for the model to follow (few-shot prompting).
+    `examples` - A container tag that holds one or more <example> tags.
+
+    <!-- Foundational Agent Tags (Mandatory for Agentic Prompts) -->
+    `guiding_principles` - Defines the agent's immutable core identity, ethics, and philosophical alignment. This is the agent's "Constitution".
+    `instructions` - Provides the concrete, operational directives for the agent's primary task. This is the agent's "Rulebook".
+
+    <!-- Quality Enhancement Tags (Recommended) -->
+    `self_reflection` - Implements a mandatory internal quality assurance (QA) loop, forcing the agent to critique, score, and iterate on its own response before delivering it.
+    `tool_preambles` - Enforces transparency by making the agent "think out loud" and state its plan before using a tool or starting a multi-step process.
+
+    <!-- Agentic Behavior Tags (Situational) -->
+    `persistence` - Instructs the agent to operate with maximum autonomy, continuing its task until completion without user intervention.
+    `context_gathering` - Defines the rules for the agent's initial information-gathering and research phase.
+    `exploration` - Defines rules for understanding an existing environment (like a codebase or document structure).
+    `context_understanding` - Provides a strategy for balancing the use of internal knowledge versus external tools.
+    `verification` - Mandates a process of continuous validation of the agent's work and outputs (e.g., cross-referencing sources, running tests).
+    `efficiency` - Adds a constraint related to resource consumption (time, tokens, tool calls).
+
+    <!-- Specialized & Meta Tags (Situational) -->
+    `final_instructions` - A final, non-negotiable directive that must be followed at the very end of the process, overriding other instructions if necessary.
+    `code_editing_rules` - A specialized container for all rules and conventions related to software development tasks.
+    `[instruction]_spec` - A meta-tag template for creating custom, named instruction blocks for better organization (e.g., `<hypothesis_generation_spec>`).
+
+    <!-- External System Integration (Tools) -->
+    `tool_definitions` - Provides a complete technical specification for all available external tools.
+    `tool_usage_strategy` - Provides the agent with a strategic framework for how and when to use tools.
   </available_xml_tags>
 
   <expected_output_template>
@@ -249,7 +275,7 @@ presence_penalty: 0.0  # Similarly, do not penalize theme repetition
 <formating>
   <!-- Your final output rendered in user-friendly Markdown. Always! -->
 
-# Request Clarification
+  # Request Clarification
   <!-- This block must be skipped and empty, if there are no questions for the user. -->
   [List of questions for the user to clarify if the prompt is not clear enough only.]
   
