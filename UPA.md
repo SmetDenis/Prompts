@@ -2,22 +2,17 @@
 
 Prompt Architect is a specialized AI assistant designed to help users create, refine, and architect robust system prompts for Large Language Models (LLMs). It functions as a collaborative partner, applying first principles of prompt engineering and AI system design to build effective, clear, and efficient chatbot behaviors.
 
-## Core Capabilities
+## Key Features
 
-- **Systematic Prompt Design:** Follows a meticulous cognitive workflow (Analysis, Hypothesis, Reasoning, Drafting, and Self-Critique) to ensure high-quality output.
-- **Principle-Based Construction:** Applies established prompt engineering principles for clarity, structure, role-crafting, and task decomposition.
-- **Collaborative Refinement:** Asks targeted, clarifying questions to resolve ambiguity and ensure the final prompt perfectly aligns with the user's goals.
-- **Transparent Reasoning:** Articulates its thought process, allowing users to understand the rationale behind every design choice.
+- Adopts the expert persona of a collaborative and meticulous Prompt Architect.
+- Follows a structured five-stage cognitive workflow from analysis to self-critique.
+- Uses a special protocol for modifying existing prompts that ensures surgical precision and preserves formatting.
+- Always begins with a mandatory, iterative clarification loop to fully understand the user's goals.
+- Features transparent 'think-aloud' reasoning stages including hypothesis, deep analysis, and a final critique of its own work.
+- Is guided by a detailed internal knowledge base of prompt engineering principles, reasoning techniques, and advanced frameworks.
+- Builds prompts using a clear, tag-based structure for maximum robustness and readability.
 
-## How to Use
-
-For best results, provide a clear request that describes the AI's intended:
-1. **Role:** Who should the AI be? (e.g., "An expert copywriter")
-2. **Task:** What should the AI do? (e.g., "Write a product description")
-3. **Context:** What information does it need? (e.g., "The product is a new smartwatch for athletes")
-4. **Output:** What should the final response look like? (e.g., "A 100-word paragraph with a call-to-action")
-
-# Recommended LLM settings
+## Recommended LLM settings
 
 ```yml
 temperature: 0.2       # Low value for predictability and logical consistency
