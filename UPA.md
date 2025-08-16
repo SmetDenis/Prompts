@@ -21,10 +21,6 @@ For best results, provide a clear request that describes the AI's intended:
 
 ```yml
 temperature: 0.2       # Low value for predictability and logical consistency
-top_p: 0.9             # Can be left as default, as the temperature is already low
-max_tokens: 16k        # Sufficient limit to avoid cutting off thoughts or prompt code
-frequency_penalty: 0.0 # Do not penalize repetitions, as they may be part of the logic
-presence_penalty: 0.0  # Similarly, do not penalize theme repetition
 ```
 
 # Prompt (see source code!)
@@ -344,14 +340,13 @@ presence_penalty: 0.0  # Similarly, do not penalize theme repetition
   
   For the best result with this prompt, I recommend the following parameters:
   \`\`\`yml
-  temperature: 0.0 <-> 2.0 # Controls randomness. Lower (e.g., 0.2-0.5 for OpenAI/Gemini) for factual/deterministic output. Higher (e.g., 0.7-1.0) for creative/diverse output. Values >1.2 can become incoherent. Default often 0.7.
-  presence_penalty: -2.0 <-> 2.0 # For OpenAI: Positive values penalize new tokens based on whether they've appeared in the text so far, increasing likelihood of new topics. Usually 0.0 to 1.0. Gemini doesn't have this exact named parameter; similar effects achieved via temperature/TopP/TopK or specific instructions.
-  frequency_penalty: -2.0 <-> 2.0 # For OpenAI: Positive values penalize new tokens based on their existing frequency, decreasing repetition of same words/phrases. Usually 0.0 to 1.0. Gemini doesn't have this exact named parameter; similar effects achieved via temperature/TopP/TopK or specific instructions.
-  top_p: 0.0 <-> 1.0 # Nucleus sampling. Considers only tokens whose cumulative probability mass is P. E.g., 0.9 means top 90% most probable tokens. Often 0.9 or 1.0 (disabled). Good alternative to Temp. Supported by both OpenAI/Gemini.
-  top_k: 0 <-> (typically up to model vocab size, practically <100) # Considers only the K most likely next tokens. 0 means disabled. Smaller K for more focused output. Supported by both OpenAI/Gemini.
-  context_limit: [Number of chat messages to use, or description like "No history" or "Full"] # Example: Use last 5 messages. Context limit influences how much prior conversation the LLM remembers. For Gemini/GPT, larger context windows (e.g., 128K tokens for GPT-4, up to 1M+ for Gemini 1.5 Pro) allow for much longer histories if needed, but can increase processing time/cost.
-  reasoning_efforts: [no, low, mid, high] # This is not a standard API parameter for OpenAI/Gemini. Conceptually, 'high' might imply instructing the LLM to use more complex reasoning (e.g., explicit chain-of-thought, self-correction) within the prompt itself, or using more computational resources if a platform offers such a setting. Advise user to check their specific LLM platform's documentation for equivalent controls or if this is managed via prompt content.
-  mcp: [Suggestions for Model Context Protocol, MCP Servers] # MCP is a framework for extending LLM capabilities, often for developers. Suggestions would depend on the specific MCP implementation. This is an advanced feature, not a standard LLM API parameter. Advise user to consult their platform's documentation if MCP is supported and relevant to their use case. Example: "If using an MCP-enabled platform, consider plugins for real-time data access or specific calculation tools if relevant to your prompt's task."
+  temperature: 0.7 # Recommend a low value (0.1-0.4) for precise, factual tasks, and a high value (0.7-1.0) for creative or diverse responses.
+  stop_sequences: ["[User:", "###"] # Recommend using this to clearly define where the model should stop. This is critical for predictability and preventing extraneous text generation.
+  frequency_penalty: 0.0 # Recommend increasing slightly (up to 0.5) if you notice the model repeating the same phrases verbatim.
+  presence_penalty: 0.0 # Recommend increasing slightly (up to 0.5) if you want the model to introduce new topics and ideas more actively, which is useful for brainstorming.
+  reasoning_effort: [no, low, medium, high] # Recommend managing this through instructions. Add "Think step-by-step" for a high level of reasoning, or "Give a quick answer" for a low level.
+  verbosity: [no, low, medium, high] # Recommend managing the response detail via the prompt. Specify "Give a brief, one-sentence answer" or "Provide a detailed report."
+  mcp/tools: "[Strategic Recommendation]" # This is a strategic recommendation. If the task requires up-to-date data or calculations, I recommend designing the prompt to work with external tools.
   \`\`\`
 </formating>
 ```
