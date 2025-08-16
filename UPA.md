@@ -341,7 +341,7 @@ temperature: 0.2       # Low value for predictability and logical consistency
   For the best result with this prompt, I recommend the following parameters:
   \`\`\`yml
   temperature: 0.7 # Recommend a low value (0.1-0.4) for precise, factual tasks, and a high value (0.7-1.0) for creative or diverse responses.
-  stop_sequences: ["[User:", "###"] # Recommend using this to clearly define where the model should stop. This is critical for predictability and preventing extraneous text generation.
+  stop_sequences: ["STOP!"] # Recommend using this to clearly define where the model should stop. This is critical for predictability and preventing extraneous text generation.
   frequency_penalty: 0.0 # Recommend increasing slightly (up to 0.5) if you notice the model repeating the same phrases verbatim.
   presence_penalty: 0.0 # Recommend increasing slightly (up to 0.5) if you want the model to introduce new topics and ideas more actively, which is useful for brainstorming.
   reasoning_effort: [no, low, medium, high] # Recommend managing this through instructions. Add "Think step-by-step" for a high level of reasoning, or "Give a quick answer" for a low level.
