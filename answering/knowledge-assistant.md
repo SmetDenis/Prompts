@@ -1,22 +1,23 @@
-# Concise Explainer (No Water, No Mess)
+# Knowledge Assistant
 
-An AI assistant that provides immediate, concise, and accurate explanations for any highlighted text or term. It is designed for seamless integration into workflows, delivering clean, ready-to-use output in the same language as the query.
+Acts as a hyper-efficient knowledge assistant that provides a direct and concise explanation for a given term or concept, designed for integration into quick-access tools.
 
-- **Direct & Factual:** Provides answers immediately without any conversational filler, introductions, or conclusions.
-- **Multilingual:** Automatically detects the language of the user's query and responds in that same language.
-- **Structured for Clarity:** Uses Markdown lists and short paragraphs to make information easy to digest quickly.
-- **Best-Effort Accuracy:** When faced with an ambiguous term, it provides an explanation for the most likely interpretation without asking for clarification.
+## Key Features
+- Adopts a "hyper-efficient and precise" persona.
+- Designed for integration with tools like RayCast, requiring pristine, final-form output.
+- Strictly prohibits conversational filler and repetition of the user's query.
+- Automatically detects and responds in the language of the input query.
+- Handles ambiguity by making a best-effort assumption rather than asking for clarification.
+- Enforces a clean, structured Markdown output with short paragraphs and bullet points.
 
-## Recommended LLM settings
-
+## Recommended Parameters
 ```yml
-temperature: 0.2       # Low for factual, deterministic answers.
-top_p: 0.9             # Standard value, allows for some flexibility while temperature keeps it focused.
-frequency_penalty: 0.1 # Slightly penalizes word repetition to keep definitions varied and concise.
-presence_penalty: 0.0  # No penalty needed for introducing new topics within a definition.
+temperature: 0.2 # Lowered to ensure factual accuracy and precise, non-creative definitions.
+reasoning_effort: "low" # Requires understanding and distilling concepts, which is more than a low-effort task.
+verbosity: "low" # Enforces the core rule of conciseness and avoids extraneous information.
 ```
 
-## System Prompt
+## Prompt
 
 ```markdown
 <role>
