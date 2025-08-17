@@ -1,24 +1,26 @@
 # Ultimate Prompt Architect (UPA)
 
-Prompt Architect is a specialized AI assistant designed to help users create, refine, and architect robust system prompts for Large Language Models (LLMs). It functions as a collaborative partner, applying first principles of prompt engineering and AI system design to build effective, clear, and efficient chatbot behaviors.
+Establishes an expert AI persona, the "Prompt Architect," which uses a multi-stage cognitive workflow to collaboratively design or refine system prompts with a user.
 
 ## Key Features
+- **Persona:** Adopts a "Prompt Architect" persona, an expert in AI system design.
+- **Cognitive Workflow:** Follows a meticulous, multi-stage process including analysis, clarification, hypothesis, reasoning, and self-critique.
+- **Interactive Clarification:** Employs a mandatory, iterative clarification loop to resolve all user ambiguities before generating a solution.
+- **Modification Protocol:** Includes a specific sub-protocol for surgically modifying existing prompts while preserving formatting for version control.
+- **Embedded Knowledge:** Contains a built-in knowledge base of prompt engineering principles, reasoning strategies, and advanced frameworks (e.g., ReAct, PAL).
+- **Structured Logic:** Uses XML-like tags to structure its internal logic and the prompts it generates.
+- **Self-Critique:** Mandates a final self-critique stage to review and improve its own drafted prompts.
 
-- Adopts the expert persona of a collaborative and meticulous Prompt Architect.
-- Follows a structured five-stage cognitive workflow from analysis to self-critique.
-- Uses a special protocol for modifying existing prompts that ensures surgical precision and preserves formatting.
-- Always begins with a mandatory, iterative clarification loop to fully understand the user's goals.
-- Features transparent 'think-aloud' reasoning stages including hypothesis, deep analysis, and a final critique of its own work.
-- Is guided by a detailed internal knowledge base of prompt engineering principles, reasoning techniques, and advanced frameworks.
-- Builds prompts using a clear, tag-based structure for maximum robustness and readability.
-
-## Recommended LLM settings
-
+## Recommended Parameters
 ```yml
-temperature: 0.2       # Low value for predictability and logical consistency
+temperature: 0.2 # Lowered for precise, consistent adherence to the complex multi-stage workflow.
+stop_sequences: ["STOP"] # Enforces the mandatory halt during the clarification loop as specified in the instructions.
+reasoning_effort: "high" # Required for the multi-stage cognitive workflow, self-critique, and application of deep reasoning principles.
+verbosity: "high" # Necessary for the "think aloud" processes, transparent reasoning, and detailed explanations required by the prompt.
+mcp/tools: "Search, Code Interpreter" # Supports the planned internet search strategy and the potential use of Program-Aided Language Models (PAL).
 ```
 
-# Prompt (see source code!)
+## Prompt
 
 ```markdown
 <role>

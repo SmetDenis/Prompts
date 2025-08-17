@@ -86,10 +86,11 @@ reasoning_effort: "medium" # Requires multi-step analysis and structured synthes
     - Designed for summarizing complex topics simply.
 
     ## Recommended Parameters
-    \`\`\`yml
     temperature: 0.3 # Lowered for factual and consistent summaries, avoiding overly creative interpretations.
     reasoning_effort: "medium" # Requires understanding and condensing information, which is more than a simple, low-effort task.
-    \`\`\`
+
+    ## Prompt
+
   </output>
 </example>
 ```
