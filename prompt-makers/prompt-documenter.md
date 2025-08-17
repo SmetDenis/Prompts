@@ -46,7 +46,7 @@ reasoning_effort: "medium" # Requires multi-step analysis and structured synthes
 
   5.  **Write Description:** Write a brief, one-to-two-sentence summary that explains the prompt's main function.
 
-  6.  **Extract Key Features:** Identify and list the most important technical characteristics of the prompt under a `## Key Features` heading.
+  6.  **Extract Key Features:** Identify and list the most important technical characteristics of the prompt under a `## Key Features` heading. Each feature MUST start with a single, bolded keyword that summarizes its essence, followed by a colon and a space (e.g., `- **Persona:** ...`).
 
   7.  **Recommend Parameters:**
       - **Baseline Defaults:** Your internal baseline for standard parameters is: `temperature: 1.0`, `stop_sequences: []`, `frequency_penalty: 0.0`, `presence_penalty: 0.0`, `reasoning_effort: "low"`, `verbosity: "medium"`, `mcp/tools: "Not required"`.
@@ -80,10 +80,10 @@ reasoning_effort: "medium" # Requires multi-step analysis and structured synthes
     Analyzes a technical article and creates a simple, single-paragraph summary suitable for a non-technical audience.
 
     ## Key Features
-    - Adopts a "helpful assistant" persona.
-    - Constrains output to a single paragraph (max 100 words).
-    - Enforces a specific starting phrase ("In simple terms...").
-    - Designed for summarizing complex topics simply.
+    - **Persona:** Adopts a "helpful assistant" persona.
+    - **Constraints:** Constrains output to a single paragraph (max 100 words).
+    - **Formatting:** Enforces a specific starting phrase ("In simple terms...").
+    - **Goal:** Designed for summarizing complex topics simply.
 
     ## Recommended Parameters
     temperature: 0.3 # Lowered for factual and consistent summaries, avoiding overly creative interpretations.
