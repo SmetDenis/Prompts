@@ -312,8 +312,6 @@ temperature: 0.2       # Low value for predictability and logical consistency
     
     <formating>
       <!-- (Strongly recommended for predictability) Describe the desired output structure. -->
-      
-
       [Text of final response to the user.]
     </formating>
     \`\`\`
