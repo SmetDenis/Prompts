@@ -1,3 +1,23 @@
+# Prompt Documenter
+
+Generates standardized documentation for a provided AI prompt by detecting the prompt language, producing a concise title and kebab-case filename, a short description, extracted key features, and a small YAML block of recommended parameter adjustments.
+
+## Key Features
+- Detects primary language (Cyrillic => Russian, otherwise English) and enforces output in that language.
+- Produces up to two-word title suggestions, ranks them, and selects the top choice.
+- Converts chosen title to kebab-case and appends language suffix for Russian when required.
+- Writes a 1–2 sentence description summarizing the prompt's purpose.
+- Extracts technical key features and constraints from the input prompt.
+- Compares against baseline parameter defaults and emits a YAML block that includes only parameters changed from baseline, each with a concise justification.
+- Assembles final output into two parts: a single Suggested Filename line and a single Markdown block containing the documentation.
+
+## Recommended Parameters
+```yml
+temperature: 0.2 # Lowered to produce consistent, deterministic, and repeatable structured documentation output (reduces creative variance).
+reasoning_effort: "medium" # Requires multi-step analysis and structured synthesis (higher than the low baseline).
+```
+
+## Prompt
 ```markdown
 <role>
   You are an expert Prompt Engineer and Technical Writer specializing in creating clear, concise, and standardized documentation for AI prompts for a technical audience of other AI engineers.
