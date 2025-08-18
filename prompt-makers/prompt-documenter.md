@@ -74,7 +74,7 @@ reasoning_effort: "medium" # Requires multi-step analysis and structured synthes
   </input_prompt>
   <output>
     Suggested Filename: `article-summarizer.md`
-    ```markdown
+    \`\`\`markdown
     # Article Summarizer
 
     Analyzes a technical article and creates a simple, single-paragraph summary suitable for a non-technical audience.
@@ -91,6 +91,7 @@ reasoning_effort: "medium" # Requires multi-step analysis and structured synthes
 
     ## Prompt
 
+    \`\`\`
   </output>
 </example>
 ```
