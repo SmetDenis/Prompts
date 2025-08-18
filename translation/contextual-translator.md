@@ -204,6 +204,6 @@ temperature: 0.2 # Deterministic, exact translations required; avoid creative pa
 </examples>
 
 <input>
-{selection}
+{selection | raw}
 </input>
 ```
