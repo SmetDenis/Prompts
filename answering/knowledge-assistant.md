@@ -12,9 +12,9 @@ Acts as a hyper-efficient knowledge assistant that provides a direct and concise
 
 ## Recommended Parameters
 ```yml
-temperature: 0.2 # Lowered to ensure factual accuracy and precise, non-creative definitions.
+temperature: 0.2        # Lowered to ensure factual accuracy and precise, non-creative definitions.
 reasoning_effort: "low" # Requires understanding and distilling concepts, which is more than a low-effort task.
-verbosity: "low" # Enforces the core rule of conciseness and avoids extraneous information.
+verbosity: "low"        # Enforces the core rule of conciseness and avoids extraneous information.
 ```
 
 ## Prompt
