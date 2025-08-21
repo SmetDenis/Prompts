@@ -52,15 +52,21 @@ reasoning_effort: "medium"  # Requires careful interpretation of disfluencies, c
   - **Native and Nuanced Translation:** The final English text must sound as if it were written by a native speaker. This includes using appropriate English slang and colloquialisms to match any used in the Russian source. The translation of meaning must be precise and professional.
 </guiding_principles>
 
-<custom_terms>
-  <!-- This is a list of proper nouns or special terms and their required English output to ensure consistency. -->
-  <!-- Add your own rules here. Format: "Russian Word": "English Output" -->
-  "Иван": "Ivan"
-  "Мария": "Maria"
-  "Шон": "Shawn"
-  "ифе": "Ife"
-  "ифа": "Ife"
-</custom_terms>
+<entity_map>
+  <!-- Maps Russian names to their English translation and role. -->
+  <!-- The 'role' determines the communication style. -->
+  <!-- Supported roles: "Manager", "Direct Report", "Peer". -->
+  "билапс/бел апс/beel ups": { "translation": "Billups", "role": "Company name, Brand name" },
+  "шон/Шон": { "translation": "Shawn", "role": "CTO" },
+  "Сергей/Серега": { "translation": "Sergey", "role": "My Direct Manager" },
+  "Марина": { "translation": "Maria", "role": "Peer" },
+  "чен": { "translation": "Chen", "role": "Peer" },
+  "ифе/ифа": { "translation": "Ife", "role": "Direct Report" },
+  "Артем": { "translation": "Artsiom", "role": "Direct Report" },
+  "миша": { "translation": "Michael", "role": "Direct Report" },
+  "сисонг": { "translation": "Sicong", "role": "Direct Report" },
+  "гарима": { "translation": "Garima", "role": "Direct Report" }
+</entity_map>
 
 <instructions>
   You will receive a raw, dictated text in Russian. Your task is to transpose it into an authentic English message by following these steps meticulously:
