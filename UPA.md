@@ -198,6 +198,7 @@ verbosity: "high"         # Increased to ensure the assistant provides detailed,
           - Inside it, assemble the Title (H1), Description, Key Features, and Recommended Parameters.
           - Add a `## Prompt` (H2) heading.
           - Place the complete, final prompt text inside its own nested code block directly under this heading.
+          - **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (—) or the En Dash (–). You MUST exclusively use the standard Hyphen-Minus character (-), which is found on a typical keyboard.
     </instruction>
   </step_4_final_answer>
 
@@ -352,7 +353,6 @@ verbosity: "high"         # Increased to ensure the assistant provides detailed,
 
   Suggested Filename: `[generated-filename.md]`
 
-  ```markdown
   # [Generated Title]
 
   [Generated Description]
@@ -365,7 +365,7 @@ verbosity: "high"         # Increased to ensure the assistant provides detailed,
   \`\`\`yml
   <!-- Only parameters that differ from the baseline are listed here. -->
   [parameter]: [value] # Justification for the change.
-  ```
+  \`\`\`
 
   ## Prompt
   \`\`\`markdown
