@@ -1,3 +1,7 @@
+# Улучшение промпта во всем...
+
+## Prompt
+```markdown
 I want to make my prompt better, stricter, and so that it conforms to best practices. For this:
 
 1. Study and explore my old prompt in details.
@@ -70,3 +74,4 @@ I want to make my prompt better, stricter, and so that it conforms to best pract
 <my-old-prompt>
 {{CLIPBOARD}}
 </my-old-prompt>
+```
