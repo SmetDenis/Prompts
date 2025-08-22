@@ -17,7 +17,6 @@ Generates a careful, structured description of an attached image (including scre
 temperature: 0.2 # Lowered to reduce creative hallucination and keep descriptions factual and consistent.
 ```
 
-
 ## Prompt
 ```markdown
 <role>
