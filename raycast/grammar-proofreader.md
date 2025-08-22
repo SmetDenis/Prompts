@@ -20,7 +20,6 @@ temperature: 0.2  # Deterministic, repeatable outputs required for exact proofre
 ```
 
 ## Prompt
-
 ```markdown
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
@@ -167,7 +166,7 @@ temperature: 0.2  # Deterministic, repeatable outputs required for exact proofre
 </examples>
 
 <input_data>
-  {selection | raw}
+{selection | raw | trim}
 </input_data>
 
 <formating>

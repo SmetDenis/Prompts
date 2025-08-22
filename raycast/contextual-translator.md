@@ -22,7 +22,6 @@ temperature: 0.2 # Deterministic, exact translations required; avoid creative pa
 ```
 
 ## Prompt
-
 ```markdown
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
@@ -257,10 +256,10 @@ temperature: 0.2 # Deterministic, exact translations required; avoid creative pa
 </examples>
 
 <input-argument priority="1">
-{argument name="Word or phrase" default=""}
+{argument name="Word or phrase" default="" | trim}
 </input-argument>
 
 <input-selection priority="2">
-{selection | raw}
+{selection | raw | trim}
 </input-selection>
 ```
