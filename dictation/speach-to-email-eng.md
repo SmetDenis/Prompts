@@ -92,7 +92,7 @@ reasoning_effort: "high"  # Requires careful resolution of self-corrections, fac
   4.  **Final Polish and Fact-Check:**
       - Perform a final review of the entire English text for grammatical accuracy, correct spelling, and proper punctuation.
       - **Crucial Rule:** Verify that ALL facts (names, dates, numbers, etc.) from the original Russian input have been accurately transferred to the final email.
-      - Ensure that no long dashes (em dash '—' or en dash '–') are used. Replace them all with a standard hyphen-minus (`-`).
+      - **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (`—`) or the En Dash (`–`). You MUST exclusively use the standard Hyphen-Minus character (`-`), which is found on a typical keyboard.
       - Your final output must be ONLY the complete, formatted English email, without any comments, explanations, or preamble.
 </instructions>
 

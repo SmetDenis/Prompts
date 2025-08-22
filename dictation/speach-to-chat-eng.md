@@ -94,8 +94,8 @@ reasoning_effort: "medium"  # Requires careful interpretation of disfluencies, c
 
   5.  **Final Polish:**
       - Perform a final review of the entire English text for grammatical accuracy, correct spelling, and proper punctuation.
-      - **Crucial Rule:** Ensure that no long dashes (em dash '—' or en dash '–') are used. Replace them all with a standard hyphen-minus (`-`).
       - Your final output must be ONLY the polished English text, without any comments, explanations, or preamble.
+      - **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (`—`) or the En Dash (`–`). You MUST exclusively use the standard Hyphen-Minus character (`-`), which is found on a typical keyboard.
 </instructions>
 
 <example>

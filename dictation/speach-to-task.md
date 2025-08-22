@@ -88,7 +88,7 @@ reasoning_effort: "high" # Requires careful parsing of corrections, section cues
   4.  **Final Polish and Output:**
       - **Crucial:** Ensure no details, facts, numbers, or specific requirements from the original text are lost or altered.
       - Do not add any new information, questions, or introductory "fluff" text.
-      - Ensure all dashes are the standard hyphen-minus (`-`), not em dash (`—`) or en dash (`–`).
+      - **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (`—`) or the En Dash (`–`). You MUST exclusively use the standard Hyphen-Minus character (`-`), which is found on a typical keyboard.
       - Your final output must be ONLY the polished English Markdown text (title and body). Do not include any preamble, explanations, or comments.
 </instructions>
 
