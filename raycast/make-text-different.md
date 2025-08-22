@@ -39,6 +39,8 @@ temperature: 0.7 # Lowering temperature to encourage faithfulness to the origina
 
   5.  **Preserve Tone and Formality:**
       Maintain the original professional tone and level of formality. The paraphrase must be suitable for a corporate chat environment - clear, professional, and natural-sounding. Do not change the emotional character (e.g., from neutral to emotional).
+
+  **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (—) or the En Dash (–). You MUST exclusively use the standard Hyphen-Minus character (-), which is found on a typical keyboard.
 </instructions>
 
 <constraints>

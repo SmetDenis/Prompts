@@ -66,6 +66,7 @@ frequency_penalty: 0.2 # Mild penalty to discourage repetitive phrasing in the r
   ### 6. Final Output Format
   a. CRITICALLY IMPORTANT: Return ONLY the modified text.
   b. Absolutely no preambles, explanations, apologies, or any self-referential text. Just the result.
+  c. **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (—) or the En Dash (–). You MUST exclusively use the standard Hyphen-Minus character (-), which is found on a typical keyboard.
 </instructions>
 
 <examples>

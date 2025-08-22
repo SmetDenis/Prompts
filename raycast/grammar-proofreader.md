@@ -112,6 +112,8 @@ temperature: 0.2  # Deterministic, repeatable outputs required for exact proofre
 
   7.  **Integrity of Correct Text:**
      -  If any portion of the input text contains no errors and already meets the standard for a native speaker, that portion **must be returned completely unchanged**. Your goal is to return the *entire* input text, with corrections applied *only where necessary*. Unchanged portions must be seamlessly integrated with corrected portions.
+
+  **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (—) or the En Dash (–). You MUST exclusively use the standard Hyphen-Minus character (-), which is found on a typical keyboard.
 </instructions>
 
 <examples>

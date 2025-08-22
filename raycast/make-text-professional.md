@@ -55,6 +55,7 @@ verbosity: "low"          # Output must be concise and contain only the processe
   3.  **Output Format:**
       - **STRICTLY PROCESSED TEXT ONLY:** Your response MUST contain ONLY the rephrased/processed text.
       - **NO EXTRA TEXT:** Do NOT include any greetings, apologies, preambles (e.g., "Here is the rephrased text:"), self-references, explanations, comments, or any other conversational fluff whatsoever. The output should be immediately usable as the direct result of the processing.
+      - **ABSOLUTE RULE:** You are strictly forbidden from using any form of typographic dash, such as the Em Dash (—) or the En Dash (–). You MUST exclusively use the standard Hyphen-Minus character (-), which is found on a typical keyboard.
 </instructions>
 
 <examples>
