@@ -166,7 +166,7 @@ temperature: 0.2  # Deterministic, repeatable outputs required for exact proofre
 </examples>
 
 <input_data>
-{selection | raw | trim}
+  {selection | raw | trim}
 </input_data>
 
 <formating>

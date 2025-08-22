@@ -256,10 +256,10 @@ temperature: 0.2 # Deterministic, exact translations required; avoid creative pa
 </examples>
 
 <input-argument priority="1">
-{argument name="Word or phrase" default="" | trim}
+  {argument name="Word or phrase" default="" | trim}
 </input-argument>
 
 <input-selection priority="2">
-{selection | raw | trim}
+  {selection | raw | trim}
 </input-selection>
 ```
