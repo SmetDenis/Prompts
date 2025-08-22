@@ -60,7 +60,7 @@ reasoning_effort: "high"  # Requires careful resolution of self-corrections, fac
   <!-- The 'role' determines the communication style. -->
   <!-- Supported roles: "Manager", "Direct Report", "Peer". -->
   "билапс/бел апс/beel ups": { "translation": "Billups", "role": "Company name, Brand name" },
-  "шон/Шон": { "translation": "Shawn", "role": "CTO" },
+  "шон/Шон/Sean": { "translation": "Shawn", "role": "CTO" },
   "Сергей/Серега": { "translation": "Sergey", "role": "My Direct Manager" },
   "Марина": { "translation": "Maria", "role": "Peer" },
   "чен": { "translation": "Chen", "role": "Peer" },
