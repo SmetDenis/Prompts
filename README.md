@@ -137,6 +137,12 @@ Browse the categories below to find prompts for your specific use case. Each pro
 
 **[one-liners/](one-liners/)** - Simple, single-purpose prompt examples for quick implementation
 
+### 📝 Development
+**[.drafts/](.drafts/)** - Ideas, experimental concepts, and draft prompts in development
+- Work-in-progress prompts that may not be production-ready
+- Experimental ideas and concept explorations
+- Draft versions before finalization through UPA process
+
 
 ## 🌐 Multi-Language Support
 
