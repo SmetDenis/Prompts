@@ -125,12 +125,13 @@ Browse the categories below to find prompts for your specific use case. Each pro
 - OCR with real-time translation capabilities
 - Visual data extraction and processing
 
-### ⚡ Quick Tools
-**[raycast/](raycast/)** - Fast automation and text processing utilities
+### ⚡ Raycast AI Commands
+**[raycast/](raycast/)** - Custom AI commands for the popular Raycast productivity utility
 - Context-aware translation services
 - Advanced grammar and style checking
 - Professional tone conversion
 - Text enhancement and formatting
+- Ready-to-import Raycast AI command configurations
 
 ### 🔧 Quick Prompts for Open Web UI
 **[openwebui-quick/](openwebui-quick/)** - Fast, ready-to-use prompt fragments optimized for Open Web UI

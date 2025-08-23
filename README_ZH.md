@@ -123,12 +123,13 @@ verbosity: "high"         # 詳細推理和輸出
 - 具有實時翻譯功能的 OCR
 - 視覺數據提取和處理
 
-### ⚡ 快速工具
-**[raycast/](raycast/)** - 快速自動化和文本處理工具
+### ⚡ Raycast AI 指令
+**[raycast/](raycast/)** - 為熱門生產力工具 Raycast 設計的自訂 AI 指令
 - 上下文感知翻譯服務
 - 高級語法和風格檢查
 - 專業語調轉換
 - 文本增強和格式化
+- 可立即匯入的 Raycast AI 指令配置
 
 ### 🔧 Open Web UI 快速提示詞
 **[openwebui-quick/](openwebui-quick/)** - 為 Open Web UI 優化的快速、立即可用的提示詞片段
