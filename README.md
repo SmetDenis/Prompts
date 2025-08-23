@@ -132,8 +132,8 @@ Browse the categories below to find prompts for your specific use case. Each pro
 - Professional tone conversion
 - Text enhancement and formatting
 
-### 🔧 Utilities
-**[snippets/](snippets/)** - Small utility fragments and helpers for common tasks
+### 🔧 Quick Prompts for Open Web UI
+**[openwebui-quick/](openwebui-quick/)** - Fast, ready-to-use prompt fragments optimized for Open Web UI
 
 **[one-liners/](one-liners/)** - Simple, single-purpose prompt examples for quick implementation
 
