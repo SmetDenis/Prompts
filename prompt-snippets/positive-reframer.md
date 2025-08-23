@@ -56,7 +56,7 @@ Suggested Filename: `positive-reframing-snippets-rus.md`
 - **Format:** Инкапсулирован в валидные XML-теги для модульности и легкой интеграции.
 - **Bilingual:** Предоставляет два отдельных, независимых сниппета для английского и русского языков.
 
-## Prompt
+## Prompts
 
 ### English Snippet
 ```markdown
