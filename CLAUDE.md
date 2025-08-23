@@ -103,5 +103,18 @@ The repository's centerpiece is the UPA framework (`UPA.md`), which defines a co
 - Specialized technical terminology translations
 - Regional compliance and usage considerations
 
+### Multi-Language README Synchronization
+**CRITICAL REQUIREMENT:** This repository maintains three README files that must be kept synchronized:
+- `README.md` (English - primary)
+- `README_RUS.md` (Russian)  
+- `README_ZH.md` (Traditional Chinese)
+
+**Mandatory Protocol:**
+- Any changes to content, structure, or information in one README MUST be reflected in all three versions
+- When updating any README, immediately update the other two to maintain consistency
+- Ensure cultural and linguistic adaptation while preserving core information
+- All three files should have identical structure and equivalent content coverage
+- Never leave README files out of sync - this creates confusion for international users
+
 ### No Build/Test Commands
 This repository contains only documentation and text files. There are no build processes, dependency management, or test suites to run. All validation is manual through prompt testing in target AI systems.
