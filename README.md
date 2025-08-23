@@ -1,5 +1,7 @@
 # AI Prompts Collection
 
+> **Русская версия:** [README_RUS.md](README_RUS.md) | **繁體中文版本：** [README_ZH.md](README_ZH.md)
+
 A comprehensive collection of professionally crafted AI prompts for various applications, from coding assistance to content processing. This repository contains structured, production-ready prompts designed for modern AI systems.
 
 ## 🎯 Ultimate Prompt Architect (UPA) Framework
