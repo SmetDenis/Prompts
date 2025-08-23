@@ -58,6 +58,11 @@ verbosity: "high"         # Detailed reasoning and outputs
      - Optimized parameters
      - Complete, production-ready prompt text
 
+6. **Optional Enhancement (Advanced)**
+   - After receiving your prompt, you can optionally enhance it by incorporating snippets from **[prompt-snippets/](prompt-snippets/)**
+   - Add components like positive reframing rules, clarification loops, or security patterns as needed
+   - Mix and match snippets to customize your prompt for specific requirements
+
 **Example starter request:**
 > "Create a prompt for a code review assistant that helps senior developers identify security vulnerabilities and performance issues in Python code."
 
