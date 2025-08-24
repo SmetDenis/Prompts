@@ -8,8 +8,8 @@ A reusable prompt snippet that instructs an AI to automatically detect the user'
 - **Stateful Behavior:** Implements a "sticky" session language for explicit commands or code-based interactions.
 - **Context-Aware:** Differentiates between explanatory text (which is translated) and programming code (which is not).
 
-## Prompt
-```markdown
+## Snippet for prompt
+```xml
 <language_adaptation_rules>
   <!-- This block defines the rules for multilingual interaction. You MUST follow these steps in order before generating any response. -->
   <!-- Your primary task is to adapt your response language to the user's language for a seamless experience. This logic overrides other general instructions. -->

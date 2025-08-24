@@ -12,7 +12,7 @@ A guideline block that instructs an assistant to produce deep, evidence-based, a
 - **Use-case:** Best applied when analytical, well-supported, and structured answers are required.
 
 ## Snippet for prompt
-```markdown
+```xml
 <!--
   PROMPT SNIPPET: PROTOCOL FOR RESPONSE ENHANCEMENT
   Copy and paste this entire block into your prompts to encourage detailed,

@@ -12,7 +12,7 @@ A high-priority meta-protocol that forces an assistant into an iterative "Analyz
 - **Risk:** Can cause indefinite questioning or refusal to proceed without complete answers.
 
 ## Snippet for prompt
-```markdown
+```xml
 <!-- Place this entire block early in your system prompt, after the initial role and instructions. -->
 # 1. Mandatory Clarification Loop
 

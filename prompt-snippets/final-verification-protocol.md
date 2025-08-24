@@ -11,7 +11,7 @@ Summarizes and enforces a mandatory pre-response protocol that requires reviewin
 - **DecisionGate:** Prohibits proceeding until the assistant is fully confident all requirements are understood.
 
 ## Snippet for prompt
-```markdown
+```xml
 <!-- HOLISTIC CONTEXT SYNTHESIS PROTOCOL -->
 <final_synthesis_protocol>
   <description>

@@ -10,7 +10,7 @@ This is a universal, model-agnostic snippet designed to protect Large Language M
 - **Broad Compatibility:** Uses a structured XML format for high reliability across a wide range of modern instruction-following LLMs.
 
 ## Snippet for prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 

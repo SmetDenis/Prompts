@@ -5,10 +5,8 @@ Enforces an absolute typography constraint that forbids em and en dashes and req
 ## Key Features
 - **Rule:** Absolute prohibition of em dash and en dash characters; only the standard hyphen-minus (-) is allowed.
 
-```yaml
-temperature: 0.0 # Minimizes creative substitutions (e.g., replacing hyphen-minus with en/em dashes) and enforces literal adherence to the rule.
-## Prompt
-```markdown
+## Snippet for prompt
+```xml
 <!-- SNIPPET: Keyboard-Only Hyphen Rule -->
 <typography_rule>
   <instruction>

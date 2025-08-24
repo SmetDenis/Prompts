@@ -12,7 +12,7 @@ Enforces a four-step, visible reasoning and self-critique protocol that requires
 - **Fail-Safe:** If inconsistencies are detected, the protocol forces the model to ask clarifying questions and wait for user input.
 
 ## Snippet for prompt
-```markdown
+```xml
 <!--
   SNIPPET: Interactive Deep Reasoning and Self-Critique Protocol.
   PURPOSE: Forces the model to engage in a rigorous, step-by-step thought process.

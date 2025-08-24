@@ -8,10 +8,10 @@ This is a set of two reusable, conditional instruction snippets (for English and
 - **Format:** Encapsulated in valid XML tags for modularity and easy integration.
 - **Bilingual:** Provides two separate, independent snippets for English and Russian (to make rule really language specific).
 
-## Prompts
+## Snippets for prompt
 
-### English Snippet
-```markdown
+### For English version
+```xml
 <!-- Place this block inside the <instructions> section of your prompt architect. -->
 <positive_reframing_rule>
   <!-- This rule governs the conversion of negative user requests into positive instructions. -->
@@ -44,8 +44,8 @@ This is a set of two reusable, conditional instruction snippets (for English and
 </positive_reframing_rule>
 ```
 
-### Russian Snippet
-```markdown
+### For Russian version
+```xml
 <!-- Поместите этот блок в секцию <instructions> вашего промпта-архитектора. -->
 <positive_reframing_rule_rus>
   <!-- Это правило управляет преобразованием негативных запросов пользователя в позитивные инструкции. -->
