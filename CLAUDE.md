@@ -106,7 +106,7 @@ The repository's centerpiece is the UPA framework (`UPA.md`), which defines a co
 ### Multi-Language README Synchronization
 **CRITICAL REQUIREMENT:** This repository maintains three README files that must be kept synchronized:
 - `README.md` (English - primary)
-- `README_RUS.md` (Russian)  
+- `README_RUS.md` (Russian)
 - `README_ZH.md` (Traditional Chinese)
 
 **Mandatory Protocol:**
@@ -118,3 +118,9 @@ The repository's centerpiece is the UPA framework (`UPA.md`), which defines a co
 
 ### No Build/Test Commands
 This repository contains only documentation and text files. There are no build processes, dependency management, or test suites to run. All validation is manual through prompt testing in target AI systems.
+
+# Important Instruction Reminders
+- Do what has been asked; nothing more, nothing less.
+- NEVER create files unless they're absolutely necessary for achieving your goal.
+- ALWAYS prefer editing an existing file to creating a new one.
+- NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
