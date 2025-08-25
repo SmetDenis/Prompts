@@ -18,7 +18,7 @@ Defines a rigorous, multi-stage system prompt and cognitive workflow for a "Prom
 ```yml
 temperature: 0.2          # Lowered to favor deterministic, consistent, and reproducible system-prompt design rather than creative variation.
 reasoning_effort: "high"  # Elevated because the prompt mandates multi-step planning, deep analysis, and transparent reasoning.
-verbosity: "high"         # Increased to ensure the assistant provides detailed, step-by-step visible reasoning and comprehensive outputs.
+verbosity: "high"         # For GPT-5. Increased to ensure the assistant provides detailed, step-by-step visible reasoning and comprehensive outputs.
 ```
 
 ## Prompt
