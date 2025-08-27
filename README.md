@@ -75,63 +75,63 @@ Browse the categories below to find prompts for your specific use case. Each pro
 ## 📁 Categories
 
 ### 🔧 Development & Coding
-**[coding/](coding/)** - Programming assistance, code review, and development workflows
+**[coding/](coding/README.md)** - Programming assistance, code review, and development workflows
 - Expert-level programming assistants for experienced developers
 - Multi-domain technical problem solving
 - Automated documentation and README generation
 - Code refactoring and optimization guidance
 
 ### 💬 Communication & Answering
-**[answering/](answering/)** - Question answering and knowledge retrieval systems
+**[answering/](answering/README.md)** - Question answering and knowledge retrieval systems
 - Comprehensive research and information assistants
 - Complex query breakdown and explanation
 - Concise response generation in multiple languages
 - Knowledge synthesis and fact verification
 
 ### 🎯 Prompt Engineering
-**[prompt-makers/](prompt-makers/)** - Meta-prompts for creating other prompts, including the UPA framework
+**[prompt-makers/](prompt-makers/README.md)** - Meta-prompts for creating other prompts, including the UPA framework
 - **Ultimate Prompt Architect (UPA)** - The core framework used to create most prompts in this repository
 - Enhanced prompt design systems with clarification loops
 - Automated prompt documentation and optimization
 - Template-based prompt generation tools
 
 ### 🧩 Reusable Components
-**[prompt-snippets/](prompt-snippets/)** - Modular prompt components and patterns
+**[prompt-snippets/](prompt-snippets/README.md)** - Modular prompt components and patterns
 - Convert negative constraints to positive directives
 - Iterative requirement gathering and clarification loops
 - Security patterns for robust, injection-resistant prompts
 - Deep reasoning and verification protocols
 
 ### 🔍 Research & Analysis
-**[research/](research/)** - Academic and analytical workflows
+**[research/](research/README.md)** - Academic and analytical workflows
 - Multi-step analytical thinking frameworks
 - Complex task decomposition and planning systems
 - Structured problem-solving assistants
 - Performance review and evaluation tools
 
 ### 📝 Content Processing
-**[summarization/](summarization/)** - Text summarization and analysis
+**[summarization/](summarization/README.md)** - Text summarization and analysis
 - Intelligent content summarization with context awareness
 - Technical document analysis and breakdown
 - Audio/video transcript processing and extraction
 - Multi-format content transformation
 
 ### 🎤 Voice & Dictation
-**[dictation/](dictation/)** - Speech-to-text and voice command processing
+**[dictation/](dictation/README.md)** - Speech-to-text and voice command processing
 - Voice command to actionable task conversion
 - Multilingual speech processing and translation
 - Voice-to-command line translation
 - Contextual speech recognition enhancement
 
 ### 🖼️ Image & OCR
-**[image-to-text/](image-to-text/)** - Optical character recognition and image analysis
+**[image-to-text/](image-to-text/README.md)** - Optical character recognition and image analysis
 - Advanced OCR with context understanding
 - Comprehensive image content analysis
 - OCR with real-time translation capabilities
 - Visual data extraction and processing
 
 ### ⚡ Raycast AI Commands
-**[raycast/](raycast/)** - Custom AI commands for the popular Raycast productivity utility
+**[raycast/](raycast/README.md)** - Custom AI commands for the popular Raycast productivity utility
 - Context-aware translation services
 - Advanced grammar and style checking
 - Professional tone conversion
@@ -139,9 +139,9 @@ Browse the categories below to find prompts for your specific use case. Each pro
 - Ready-to-import Raycast AI command configurations
 
 ### 🔧 Quick Prompts for Open Web UI
-**[openwebui-quick/](openwebui-quick/)** - Fast, ready-to-use prompt fragments optimized for Open Web UI
+**[openwebui-quick/](openwebui-quick/README.md)** - Fast, ready-to-use prompt fragments optimized for Open Web UI
 
-**[one-liners/](one-liners/)** - Simple, single-purpose prompt examples for quick implementation
+**[one-liners/](one-liners/README.md)** - Simple, single-purpose prompt examples for quick implementation
 
 ### 📝 Development
 **[.drafts/](.drafts/)** - Ideas, experimental concepts, and draft prompts in development
@@ -197,7 +197,7 @@ All prompts follow consistent XML-based structure:
 
 ## 📚 Learning Resources
 
-Explore **[!_guides/](!_guides/)** for comprehensive prompt engineering documentation and advanced techniques developed by DAIR.AI.
+Explore **[!_guides/](!_guides/README.md)** for comprehensive prompt engineering documentation and advanced techniques.
 
 ## 📄 License
 
