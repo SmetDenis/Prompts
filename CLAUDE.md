@@ -85,6 +85,7 @@ The repository's centerpiece is the UPA framework (`UPA.md`), which defines a co
 - Include usage examples and help sections
 - End all list items with periods for consistency
 - Use only hyphen-minus (-) character instead of em dash (—) or en dash (–)
+- When referencing files or directories within the repository, always use Markdown links (e.g., `[UPA.md](UPA.md)`, `[dictation/](dictation/)`) for better navigation
 
 ### Modification Approach
 - Preserve exact formatting and whitespace for version control compatibility
