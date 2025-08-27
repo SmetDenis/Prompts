@@ -83,6 +83,8 @@ The repository's centerpiece is the UPA framework (`UPA.md`), which defines a co
 - Use XML tags for prompt organization
 - Provide parameter recommendations when applicable
 - Include usage examples and help sections
+- End all list items with periods for consistency
+- Use only hyphen-minus (-) character instead of em dash (—) or en dash (–)
 
 ### Modification Approach
 - Preserve exact formatting and whitespace for version control compatibility
