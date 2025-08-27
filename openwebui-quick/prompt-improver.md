@@ -1,7 +1,7 @@
 # Improving the prompt across the board...
 
 ## Prompt
-```markdown
+```xml
 I want to make my prompt better, stricter, and so that it conforms to best practices. For this:
 
 1. Study and explore my old prompt in details.

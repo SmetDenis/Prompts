@@ -20,7 +20,7 @@ reasoning_effort: "medium"  # Requires careful interpretation of disfluencies, c
 ```
 
 ## Prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 

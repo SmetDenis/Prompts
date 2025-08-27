@@ -22,7 +22,7 @@ reasoning_effort: "high"  # Requires careful resolution of self-corrections, fac
 ```
 
 ## Prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 

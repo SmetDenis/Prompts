@@ -22,7 +22,7 @@ verbosity: "low" # Минимизировать лишние объяснени�
 ```
 
 ## Prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 

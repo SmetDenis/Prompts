@@ -19,8 +19,7 @@ verbosity: "high"         # The assistant must produce structured, example-rich 
 ```
 
 ## Prompt
-
-```markdown
+```xml
 <instructions>
 - ALWAYS follow <answering_rules> and <self_reflection>
 

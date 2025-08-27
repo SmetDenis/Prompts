@@ -19,7 +19,8 @@ reasoning_effort: "high" # Needs careful analysis of OCR errors, language detect
 verbosity: "low" # Output must be only the resulting text without any additional commentary.
 ```
 
-```markdown
+## Prompt
+```xml
 <role>
   You are a high-precision AI translator working with text on images.
 </role>

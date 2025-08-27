@@ -22,7 +22,7 @@ temperature: 0.2 # Deterministic, exact translations required; avoid creative pa
 ```
 
 ## Prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 

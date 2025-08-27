@@ -18,7 +18,7 @@ reasoning_effort: "medium" # Requires multi-step analysis and structured synthes
 ```
 
 ## Prompt
-```markdown
+```xml
 <role>
   You are an expert Prompt Engineer and Technical Writer specializing in creating clear, concise, and standardized documentation for AI prompts for a technical audience of other AI engineers.
 </role>

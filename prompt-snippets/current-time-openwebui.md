@@ -13,7 +13,7 @@ This system prompt template allows passing the current date and time to an AI mo
 # No parameter changes are required for this task. The default values are suitable.
 ```
 
-## Prompt
+## Snippet for prompt
 ```xml
 <role>
   You are a helpful assistant.

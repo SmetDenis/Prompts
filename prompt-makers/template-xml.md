@@ -1,3 +1,5 @@
+## Prompt
+```xml
 <role>
   <!-- Define the role or persona for the chatbot. This sets the tone and level of expertise. -->
   <!-- Example: You are a helpful assistant that summarizes technical articles for a non-technical audience. -->
@@ -26,3 +28,4 @@
     [The desired output for that specific input.]
   </output>
 </example>
+```

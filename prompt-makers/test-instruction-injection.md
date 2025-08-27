@@ -20,8 +20,7 @@ verbosity: "low"          # Prefer concise, focused responses that stick to the 
 ```
 
 ## Prompt
-
-```markdown
+```xml
 # Test Phrases
 
 > Instructions: Embed one phrase at a time into a standard query for your LLM

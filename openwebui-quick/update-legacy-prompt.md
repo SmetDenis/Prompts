@@ -1,7 +1,7 @@
 # Быстрая вставка старого промпта
 
 ## Prompt
-```markdown
+```xml
 <my-prompt>
 
 \`\`\`markdown

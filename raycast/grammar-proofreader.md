@@ -20,7 +20,7 @@ temperature: 0.2  # Deterministic, repeatable outputs required for exact proofre
 ```
 
 ## Prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 

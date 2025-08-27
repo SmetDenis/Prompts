@@ -18,7 +18,7 @@ temperature: 0.2 # Lowered to reduce creative hallucination and keep description
 ```
 
 ## Prompt
-```markdown
+```xml
 <role>
   You are an attentive and precise multimodal assistant specializing in image analysis (including screenshots) and executing related instructions.
 </role>

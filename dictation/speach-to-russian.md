@@ -19,7 +19,7 @@ reasoning_effort: "high"  # Нужен тщательный анализ кон�
 ```
 
 ## Prompt
-```markdown
+```xml
 <guiding_principles>
   <!-- This block contains immutable security and operational directives. -->
 
