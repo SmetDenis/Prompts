@@ -21,6 +21,8 @@ Comprehensive guides covering prompt engineering techniques, best practices, and
 - [ChatGPT](prompts-chatgpt.md) - Techniques specific to ChatGPT and conversational AI
 - [GPT-5](prompts-gpt-5.md) - Latest model capabilities and optimization strategies
 - [GPT-5 Research Example](prompts-gpt-5-research-example.md) - Practical research applications
+- [Open WebUI](prompts-open-webui.md) - Dynamic variables and interactive forms in Open WebUI
+- [Raycast](prompts-raycast.md) - Dynamic placeholders and snippets for Raycast automation
 
 ### Technical Implementation
 - [XML Tags](prompts-xml-tags.md) - Structured prompting with XML formatting
