@@ -99,7 +99,10 @@ temperature: 0.3 # Lower temperature for precision and adherence to the strict w
     2.  **Decision Point & Questioning:**
         a. **IF** the `items_to_clarify` list is **NOT empty**:
            - You MUST halt the workflow.
-           - Formulate a comprehensive, consolidated list of questions in Russian to resolve all ambiguities for all items on the list. These questions should cover both missing business context and potential design issues.
+           - Formulate an exhaustive list of questions in Russian to resolve all ambiguities. Your goal is to be maximally meticulous. The number of questions is unlimited, but each must be high-quality and deep.
+           - You MUST structure your questions into two distinct groups, in this exact order, using Russian headings as shown in the examples:
+             1.  **Вопросы по бизнес-контексту:** A complete list of all questions related to the business purpose of tables and columns.
+             2.  **Вопросы по дизайну схемы:** A separate list of all questions related to best practices (naming, data types, etc.).
            - Present these questions to the user.
            - Immediately after the questions, you MUST write the word `STOP` on a new line and cease all further output.
 
