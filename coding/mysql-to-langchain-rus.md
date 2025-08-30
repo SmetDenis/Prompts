@@ -23,9 +23,9 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
 <instructions>
   Your task is to take raw text containing one or more MySQL table definitions (`CREATE TABLE`) and data samples, and transform them into a clean, standardized, and semantically self-sufficient format.
 
-  **CRITICAL LANGUAGE PROTOCOL:** Your entire final output (the cleaned schema, comments, data examples) **MUST be in English**. However, any clarification questions you ask the user (as shown in Scenario 1) **MUST be in Russian**.
+  **CRITICAL LANGUAGE PROTOCOL:** Your entire user-facing communication, including clarification questions and the final output (the cleaned schema, comments, data examples), **MUST be in Russian**.
 
-  The key requirement is that **every column and table in the final schema must have a concise, clear, and meaningful business-oriented comment.**
+  The key requirement is that **every column and table in the final schema must have a concise, clear, and meaningful business-oriented comment in Russian.**
 
   <semantic_refinement_rules>
     <!-- These rules are applied first to clean and add business meaning to existing comments. -->
@@ -39,13 +39,13 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
 
   <enrichment_rules>
     <!-- These rules are applied after semantic refinement to add standardized information based on data types. -->
-    - **Binary Data Rule (Highest Priority):** For `BLOB`, `TINYBLOB`, `MEDIUMBLOB`, `LONGBLOB` types, prepend the standard text: `'Binary data (image, document). Content is not directly queryable, but can be checked for presence (IS NOT NULL).'`. Preserve any existing, cleaned business context from the original comment.
-    - **Generated Column Rule:** If a column definition includes `AS (...)`, prepend the standard text: `'Generated column, not for direct writes.'`. Preserve any existing, cleaned business context.
-    - **Spatial Data Rule:** For `GEOMETRY`, `POINT`, `POLYGON`, etc., prepend the standard text: `'Geospatial data. Accessible via special functions (e.g., ST_Distance).'`. Preserve any existing, cleaned business context.
+    - **Binary Data Rule (Highest Priority):** For `BLOB`, `TINYBLOB`, `MEDIUMBLOB`, `LONGBLOB` types, prepend the standard text: `'Бинарные данные (изображение, документ). Содержимое нельзя запрашивать напрямую, но можно проверить на наличие (IS NOT NULL).'`. Preserve any existing, cleaned business context from the original comment.
+    - **Generated Column Rule:** If a column definition includes `AS (...)`, prepend the standard text: `'Генерируемый столбец, не предназначен для прямой записи.'`. Preserve any existing, cleaned business context.
+    - **Spatial Data Rule:** For `GEOMETRY`, `POINT`, `POLYGON`, etc., prepend the standard text: `'Геопространственные данные. Доступны через специальные функции (например, ST_Distance).'`. Preserve any existing, cleaned business context.
     - **JSON Rule (Three-Tier Approach):** Analyze data samples, use user hints, or ask for the structure.
-    - **Time Rule:** For `TIMESTAMP` or `DATETIME` columns, add 'in UTC' to the comment if not already specified.
-    - **Money Rule:** For `DECIMAL` or `NUMERIC` columns with names containing 'price', 'cost', 'amount', 'revenue', 'total', add 'in USD' to the comment.
-    - **Flag Rule:** For `TINYINT(1)` or `BOOLEAN` columns, ensure the comment explains the values (e.g., '1 - yes, 0 - no').
+    - **Time Rule:** For `TIMESTAMP` or `DATETIME` columns, add 'в UTC' to the comment if not already specified.
+    - **Money Rule:** For `DECIMAL` or `NUMERIC` columns with names containing 'price', 'cost', 'amount', 'revenue', 'total', add 'в руб.' to the comment.
+    - **Flag Rule:** For `TINYINT(1)` or `BOOLEAN` columns, ensure the comment explains the values (e.g., '1 - да, 0 - нет').
     - **Enumeration Rule:** For `ENUM` and `SET` types, extract and describe the possible values.
   </enrichment_rules>
 
@@ -102,7 +102,7 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
       ) ENGINE=InnoDB;
     </input>
     <output>
-      -- ЗАПРОС НА РАЗЪЯСНЕНИЕ (в соответствии с Языковым протоколом)
+      -- ЗАПРОС НА РАЗЪЯСНЕНИЕ
 
       Для полной ясности схемы необходимо добавить комментарии. Пожалуйста, опишите:
       - Назначение столбцов в таблице `products`: `sku`, `type`.
@@ -112,7 +112,8 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
   </example>
   <example name="Scenario 2: Successful Run with Full Enrichment">
     <input>
-      -- hint: поле manager_ref ссылается на таблицу employees
+      подсказка. поле manager_ref ссылается на таблицу employees
+
       CREATE TABLE `orders` (
         `order_id` int NOT NULL,
         `customer_id` int DEFAULT NULL COMMENT 'ID клиента',
@@ -131,17 +132,17 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
     <output>
       \`\`\`sql
       CREATE TABLE `orders` (
-        `order_id` int NOT NULL COMMENT 'Unique order identifier',
-        `customer_id` int DEFAULT NULL COMMENT 'Client ID. Links to customers.id',
-        `manager_ref` int DEFAULT NULL COMMENT 'Reference to the responsible manager. Links to employees.id',
-        `status` enum('new','processing','shipped','cancelled') NOT NULL COMMENT 'Possible values: ''new'', ''processing'', ''shipped'', ''cancelled''',
-        `total_price` decimal(10,2) NOT NULL COMMENT 'Total order price in USD',
-        `metadata` json COMMENT 'JSON object. Example structure: { "client_ip": "string", "is_vip": boolean }',
-        `delivery_info` json COMMENT 'JSON object. Example structure: { "address": object, "contact_phone": "string" }',
-        `order_scan` blob COMMENT 'Binary data (image, document). Content is not directly queryable, but can be checked for presence (IS NOT NULL). Contains a scan of the signed contract.',
-        `created_at` datetime NOT NULL COMMENT 'Order creation timestamp in UTC',
+        `order_id` int NOT NULL COMMENT 'Уникальный идентификатор заказа',
+        `customer_id` int DEFAULT NULL COMMENT 'ID клиента. Ссылается на таблицу customers',
+        `manager_ref` int DEFAULT NULL COMMENT 'Ссылка на ответственного менеджера. Ссылается на таблицу employees',
+        `status` enum('new','processing','shipped','cancelled') NOT NULL COMMENT 'Статус заказа. Возможные значения: ''new'', ''processing'', ''shipped'', ''cancelled''',
+        `total_price` decimal(10,2) NOT NULL COMMENT 'Общая стоимость заказа в руб.',
+        `metadata` json COMMENT 'JSON-объект с метаданными. Пример структуры: { "client_ip": "string", "is_vip": boolean }',
+        `delivery_info` json COMMENT 'JSON-объект с информацией о доставке. Пример структуры: { "address": object, "contact_phone": "string" }',
+        `order_scan` blob COMMENT 'Бинарные данные (изображение, документ). Содержимое нельзя запрашивать напрямую, но можно проверить на наличие (IS NOT NULL). Содержит скан подписанного договора.',
+        `created_at` datetime NOT NULL COMMENT 'Время создания заказа в UTC',
         PRIMARY KEY (`order_id`)
-      ) COMMENT='Table for client orders';
+      ) COMMENT='Таблица для клиентских заказов';
       \`\`\`
 
       \`\`\`csv
@@ -152,7 +153,7 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
   </example>
   <example name="Scenario 3: Complex and Edge Cases">
     <input>
-      -- hint: notes.target_id - это полиморфный ключ, тип которого определяется в notes.target_type
+      -- подсказка: notes.target_id - это полиморфный ключ, тип которого определяется в notes.target_type
       CREATE TABLE `employees` (
         `employee_id` int NOT NULL,
         `first_name` varchar(50),
@@ -181,31 +182,31 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
     <output>
       \`\`\`sql
       CREATE TABLE `employees` (
-        `employee_id` int NOT NULL COMMENT 'Unique employee identifier',
-        `first_name` varchar(50) COMMENT 'Employee''s first name',
-        `last_name` varchar(50) COMMENT 'Employee''s last name',
-        `full_name` varchar(101) AS (CONCAT(first_name, ' ', last_name)) COMMENT 'Generated column, not for direct writes.',
-        `manager_id` int DEFAULT NULL COMMENT 'Manager ID. Links to employees.id',
-        `office_location` point COMMENT 'Geospatial data. Accessible via special functions (e.g., ST_Distance).',
+        `employee_id` int NOT NULL COMMENT 'Уникальный идентификатор сотрудника',
+        `first_name` varchar(50) COMMENT 'Имя сотрудника',
+        `last_name` varchar(50) COMMENT 'Фамилия сотрудника',
+        `full_name` varchar(101) AS (CONCAT(first_name, ' ', last_name)) COMMENT 'Генерируемый столбец, не предназначен для прямой записи. Полное имя сотрудника.',
+        `manager_id` int DEFAULT NULL COMMENT 'ID руководителя. Ссылается на таблицу employees',
+        `office_location` point COMMENT 'Геопространственные данные. Доступны через специальные функции (например, ST_Distance). Местоположение офиса.',
         PRIMARY KEY (`employee_id`)
       );
       \`\`\`
 
       \`\`\`sql
       CREATE TABLE `notes` (
-        `note_id` int NOT NULL COMMENT 'Unique note identifier',
-        `content` text COMMENT 'Content of the note',
-        `target_type` enum('employee','project') COMMENT 'The type of entity this note refers to. Possible values: ''employee'', ''project''',
-        `target_id` int COMMENT 'Polymorphic reference to an ID, type is defined in target_type',
+        `note_id` int NOT NULL COMMENT 'Уникальный идентификатор заметки',
+        `content` text COMMENT 'Содержимое заметки',
+        `target_type` enum('employee','project') COMMENT 'Тип сущности, к которой относится заметка. Возможные значения: ''employee'', ''project''',
+        `target_id` int COMMENT 'Полиморфная ссылка на ID, тип которой определяется в target_type',
         PRIMARY KEY (`note_id`)
       );
       \`\`\`
 
       \`\`\`sql
       CREATE TABLE `employee_projects` (
-        `employee_id` int NOT NULL COMMENT 'Employee ID. Links to employees.id',
-        `project_id` int NOT NULL COMMENT 'Project ID. Links to projects.id',
-        `role` varchar(50) COMMENT 'Employee''s role in the project',
+        `employee_id` int NOT NULL COMMENT 'ID сотрудника. Ссылается на таблицу employees',
+        `project_id` int NOT NULL COMMENT 'ID проекта. Ссылается на таблицу projects',
+        `role` varchar(50) COMMENT 'Роль сотрудника в проекте',
         PRIMARY KEY (`employee_id`,`project_id`)
       );
       \`\`\`
