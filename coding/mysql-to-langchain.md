@@ -25,15 +25,25 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
 
   **CRITICAL LANGUAGE PROTOCOL:** Your entire final output (the cleaned schema, comments, data examples) **MUST be in English**. However, any clarification questions you ask the user (as shown in Scenario 1) **MUST be in Russian**.
 
-  The key requirement is that **every column in the final schema must have a concise, clear, and meaningful comment.**
+  The key requirement is that **every column and table in the final schema must have a concise, clear, and meaningful business-oriented comment.**
+
+  <semantic_refinement_rules>
+    <!-- These rules are applied first to clean and add business meaning to existing comments. -->
+    <rule id="S1" name="Business Context Inference">
+      For any comment that is abstract or overly technical (e.g., 'Surrogate key for uniqueness', 'Text field'), you MUST try to replace it with a specific business meaning. To infer this meaning, analyze the column name, table name, comments and types of other columns in the table, and known relationships (`*_id` fields).
+    </rule>
+    <rule id="S2" name="Technical Jargon Removal">
+      You MUST identify and remove technical jargon from all comments if it does not provide business context for an SQL-generating LLM. This includes engineering notes like 'immutable', 'DC to type', or internal model names. If removing jargon makes the comment empty, the field requires clarification from the user.
+    </rule>
+  </semantic_refinement_rules>
 
   <enrichment_rules>
-    You MUST apply the following rules to automatically enrich comments, provided the relevant information is not already present in an existing comment.
-    - **Binary Data Rule (Highest Priority):** For `BLOB`, `TINYBLOB`, `MEDIUMBLOB`, `LONGBLOB` types, forcibly **replace** any existing comment with: `'Binary data (image, document). Content is not directly queryable, but can be checked for presence (IS NOT NULL).'`.
-    - **Generated Column Rule:** If a column definition includes `AS (...)`, forcibly **replace** any comment with: `'Generated column, not for direct writes.'`.
-    - **Spatial Data Rule:** For `GEOMETRY`, `POINT`, `POLYGON`, etc., forcibly **replace** any comment with: `'Geospatial data. Accessible via special functions (e.g., ST_Distance).'`.
+    <!-- These rules are applied after semantic refinement to add standardized information based on data types. -->
+    - **Binary Data Rule (Highest Priority):** For `BLOB`, `TINYBLOB`, `MEDIUMBLOB`, `LONGBLOB` types, prepend the standard text: `'Binary data (image, document). Content is not directly queryable, but can be checked for presence (IS NOT NULL).'`. Preserve any existing, cleaned business context from the original comment.
+    - **Generated Column Rule:** If a column definition includes `AS (...)`, prepend the standard text: `'Generated column, not for direct writes.'`. Preserve any existing, cleaned business context.
+    - **Spatial Data Rule:** For `GEOMETRY`, `POINT`, `POLYGON`, etc., prepend the standard text: `'Geospatial data. Accessible via special functions (e.g., ST_Distance).'`. Preserve any existing, cleaned business context.
     - **JSON Rule (Three-Tier Approach):** Analyze data samples, use user hints, or ask for the structure.
-    - **Time Rule:** For `TIMESTAMP` or `DATETIME` columns, add 'in UTC' to the comment.
+    - **Time Rule:** For `TIMESTAMP` or `DATETIME` columns, add 'in UTC' to the comment if not already specified.
     - **Money Rule:** For `DECIMAL` or `NUMERIC` columns with names containing 'price', 'cost', 'amount', 'revenue', 'total', add 'in USD' to the comment.
     - **Flag Rule:** For `TINYINT(1)` or `BOOLEAN` columns, ensure the comment explains the values (e.g., '1 - yes, 0 - no').
     - **Enumeration Rule:** For `ENUM` and `SET` types, extract and describe the possible values.
@@ -54,17 +64,19 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
   </step>
 
   <step id="3" name="Comment Completion and Enrichment (Critical Step)">
-    For each table, perform a check and enrichment of comments for every column, following a strict priority hierarchy.
+    For each table, perform a comprehensive check and enrichment of all comments (for the table itself and for every column), following a strict priority hierarchy.
     1.  Create an empty list `fields_to_clarify`.
-    2.  For each column in the table:
-        a. Start with the existing comment (or an empty string if none).
-        b. **Apply enrichment rules:** Enhance the comment based on the rules in `<enrichment_rules>`, using all available sources. The rules for `BLOB`, generated, and spatial columns override any existing comment.
-        c. **If the comment is still empty:**
+    2.  **Phase A: Semantic Refinement.** For each comment (table and column):
+        a. Apply the `<semantic_refinement_rules>`. Clean the comment by removing jargon and replacing abstract descriptions with inferred business context.
+        b. **If, at any point, you lack sufficient context to confidently infer business meaning, or if a comment becomes empty after cleaning, you MUST add the item (e.g., table `products`, column `sku`) to the `fields_to_clarify` list.** It is better to ask than to make a wrong assumption.
+    3.  **Phase B: Type-Based Enrichment.** For each column, using the now-cleaned comment:
+        a. Apply the `<enrichment_rules>` to further enhance the comment based on its data type.
+        b. If the comment is still empty after both phases:
            - Check for a user hint for this field. If present, generate the comment based on it.
            - If no hint, but the column name follows the `*_id` pattern, automatically generate a comment about the relationship.
            - Otherwise, add the column name to the `fields_to_clarify` list.
-    3.  After checking all columns, if the `fields_to_clarify` list is NOT empty:
-        - **ACTION:** You MUST immediately halt the workflow. Ask the user a single, consolidated question covering all fields from the list.
+    4.  After checking all tables and columns, if the `fields_to_clarify` list is NOT empty:
+        - **ACTION:** You MUST immediately halt the workflow. Ask the user a single, consolidated question covering all items from the list.
         - **TERMINATION:** Immediately after the question, you must write the word `STOP` on a new line and cease all further output.
   </step>
 
@@ -112,7 +124,7 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
         `order_scan` BLOB DEFAULT NULL COMMENT 'Скан подписанного договора',
         `created_at` datetime NOT NULL,
         PRIMARY KEY (`order_id`)
-      ) ENGINE=InnoDB;
+      ) ENGINE=InnoDB COMMENT='Table for client orders, immutable';
 
       INSERT INTO `orders` VALUES (1,101,5,'shipped',99.50,'{"client_ip": "192.168.1.1", "is_vip": true}','{"address": {"city": "Moscow", "street": "Tverskaya 1"}, "contact_phone": "+79991234567"}',NULL,'2023-11-20 10:00:00');
     </input>
@@ -126,7 +138,7 @@ temperature: 0.1 # High precision and determinism are required; creativity is no
         `total_price` decimal(10,2) NOT NULL COMMENT 'Total order price in USD',
         `metadata` json COMMENT 'JSON object. Example structure: { "client_ip": "string", "is_vip": boolean }',
         `delivery_info` json COMMENT 'JSON object. Example structure: { "address": object, "contact_phone": "string" }',
-        `order_scan` blob COMMENT 'Binary data (image, document). Content is not directly queryable, but can be checked for presence (IS NOT NULL).',
+        `order_scan` blob COMMENT 'Binary data (image, document). Content is not directly queryable, but can be checked for presence (IS NOT NULL). Contains a scan of the signed contract.',
         `created_at` datetime NOT NULL COMMENT 'Order creation timestamp in UTC',
         PRIMARY KEY (`order_id`)
       ) COMMENT='Table for client orders';
