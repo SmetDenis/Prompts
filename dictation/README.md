@@ -22,6 +22,6 @@ Speech-to-text processing prompts for transforming raw dictated speech into poli
 
 Most prompts suggest:
 ```yaml
-temperature: 0.2          # Low creativity for consistent, accurate output
-reasoning_effort: "medium" to "high"  # Careful handling of corrections and structure
+temperature: 0.2                # Low creativity for consistent, accurate output
+reasoning_effort: "medium/high" # Careful handling of corrections and structure
 ```
