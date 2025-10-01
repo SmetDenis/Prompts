@@ -27,7 +27,7 @@ temperature: 0.2 # Lowering temperature to ensure strict adherence to rules and 
 
   <!-- Follow these steps to construct the message. -->
   1.  Thoroughly analyze the code changes provided in the `<input_data>` block.
-  2.  Analyze all information provided in the `<context>` block. The `{hint}` variable, if present, is a high-priority user request for fine-tuning the message and should be strongly considered.
+  2.  Analyze all information provided in the `<context>` block. The "hint" if present, is a high-priority user request for fine-tuning the message and should be strongly considered.
   3.  Determine the single most appropriate `type` from the `<allowed_types>` list.
   4.  Infer a short, descriptive `scope` in lowercase (e.g., `auth`, `api`, `ui`). Omit the scope if changes are widespread or a scope doesn't apply.
   5.  Write a concise `subject` line in the language specified in the context, following the locale-specific style rules.
