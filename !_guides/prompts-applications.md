@@ -12,7 +12,7 @@ Topics:
 
 ## Generating Data
 
-LLMs have strong capabilities to generate text. Using effective prompt strategies can steer the model to produce better, more consistent, and more factual responses. LLMs can also be especially useful for generating data which is useful to run all sorts of experiments. For example, we can use it to generate quick samples for a sentiment classifier like so:
+LLMs have strong capabilities to generate text. Using effective prompt strategies can steer the model to produce better, more consistent, and more factual responses. LLMs can also be especially useful for generating data, which is useful to run all sorts of experiments. For example, we can use it to generate quick samples for a sentiment classifier like so:
 
 *Prompt:*
 ```
@@ -113,9 +113,9 @@ produce 3 wine reviews and label taste, flavor, aroma related token; present the
 
 ![](../img/pal.png)
 
-Let's look at an example using LangChain and OpenAI GPT-3. We are interested to develop a simple application that's able to interpret the question being asked and provide an answer by leveraging the Python interpreter.
+Let's look at an example using LangChain and OpenAI GPT-3. We are interested in developing a simple application that's able to interpret the question being asked and provide an answer by leveraging the Python interpreter.
 
-Specifically, we are interested to create a function that allows the use of the LLM to answer questions that require date understanding. We will provide the LLM a prompt that includes a few exemplars that are adopted from [here](https://github.com/reasoning-machines/pal/blob/main/pal/prompt/date_understanding_prompt.py).
+Specifically, we are interested in creating a function that allows the use of the LLM to answer questions that require date understanding. We will provide the LLM a prompt that includes a few exemplars that are adopted from [here](https://github.com/reasoning-machines/pal/blob/main/pal/prompt/date_understanding_prompt.py).
 
 These are the imports we need:
 
@@ -185,8 +185,8 @@ today = datetime(2002, 3, 12)
 later = today + relativedelta(hours=24)
 # The answer formatted with %m/%d/%Y is
 later.strftime('%m/%d/%Y')
-# Q: Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date yesterday in MM/DD/YYYY?
-# If Jane was born on the last day of Feburary in 2001 and today is her 16-year-old birthday, then today is 16 years later.
+# Q: Jane was born on the last day of February in 2001. Today is her 16-year-old birthday. What is the date yesterday in MM/DD/YYYY?
+# If Jane was born on the last day of February in 2001 and today is her 16-year-old birthday, then today is 16 years later.
 today = datetime(2001, 2, 28) + relativedelta(years=16)
 # Yesterday,
 yesterday = today - relativedelta(days=1)

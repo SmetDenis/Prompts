@@ -18,7 +18,7 @@ Topics:
 
 ## Zero-Shot Prompting
 
-LLMs today trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We tried a few zero-shot examples in the previous section. Here is one of the examples we used:
+LLMs today, trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We tried a few zero-shot examples in the previous section. Here is one of the examples we used:
 
 *Prompt:*
 ```
@@ -143,7 +143,7 @@ The answer is True.
 
 That didn't work. It seems like few-shot prompting is not enough to get reliable responses for this type of reasoning problem. The example above provides basic information on the task. If you take a closer look, the type of task we have introduced involves a few more reasoning steps. In other words, it might help if we break the problem down into steps and demonstrate that to the model. More recently, [chain-of-thought (CoT) prompting](https://arxiv.org/abs/2201.11903) has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
 
-Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
+Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next, we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
 
 ---
 
@@ -208,7 +208,7 @@ I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2
 11 apples
 ```
 
-The answer is incorrect! Now Let's try with the special prompt.
+The answer is incorrect! Now, let's try with the special prompt.
 
 *Prompt:*
 ```
@@ -313,7 +313,7 @@ Computing for the final answer involves a few steps (check out the paper for the
 
 LLMs continue to be improved and one popular technique includes the ability to incorporate knowledge or information to help the model make more accurate predictions.
 
-Using a similar idea, can the model also be used to generate knowledge before making a prediction? That's what is attempted in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf) -- generate knowledge to be used as part of the prompt. In particular, how helpful is this for tasks such as commonsense reasoning?
+Using a similar idea, can the model also be used to generate knowledge before making a prediction? That's what is attempted in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf) - generate knowledge to be used as part of the prompt. In particular, how helpful is this for tasks such as commonsense reasoning?
 
 Let's try a simple prompt:
 
@@ -407,7 +407,7 @@ The first step involves a large language model (as an inference model) that is g
 
 APE discovers a better zero-shot CoT prompt than the human engineered "Let's think step by step" prompt (Kojima et al., 2022).
 
-The prompt "Let's work this out in a step by step way to be sure we have the right answer." elicits chain-of-though reasoning and improves performance on the MultiArith and GSM8K benchmarks:
+The prompt "Let's work this out in a step by step way to be sure we have the right answer." elicits chain-of-thought reasoning and improves performance on the MultiArith and GSM8K benchmarks:
 
 ![](../img/ape-zero-shot-cot.png)
 

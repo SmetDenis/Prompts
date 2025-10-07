@@ -193,7 +193,7 @@ Text: "hello!"
 
 ### Specificity
 
-Be very specific about the instruction and task you want the model to perform. The more descriptive and detailed the prompt is, the better the results. This is particularly important when you have a desired outcome or style of generation you are seeking. There aren't specific tokens or keywords that lead to better results. It's more important to have a good format and descriptive prompt. Providing examples in the prompt is very effective to get desired output in specific formats.
+Be very specific about the instruction and task you want the model to perform. The more descriptive and detailed the prompt is, the better the results. This is particularly important when you have a desired outcome or style of generation you are seeking. There are no specific tokens or keywords that lead to better results. It's more important to have a good format and descriptive prompt. Providing examples in the prompt is very effective to get desired output in specific formats.
 
 When designing prompts you should also keep in mind the length of the prompt as there are limitations regarding how long this can be. Thinking about how specific and detailed you should be is something to consider. Too many unnecessary details are not necessarily a good approach. The details should be relevant and contribute to the task at hand. This is something you will need to experiment with a lot. We encourage a lot of experimentation and iteration to optimize prompts for your applications.
 
@@ -218,7 +218,7 @@ The input text is obtained from [this Nature article](https://www.nature.com/art
 
 ### Avoid Impreciseness
 
-Given the tips above about being detailed and improving format, it's easy to fall into the trap of wanting to be too clever about prompts and potentially creating imprecise descriptions. It's often better to be specific and direct. The analogy here is very similar to effective communication -- the more direct, the more effective the message gets across.
+Given the tips above about being detailed and improving format, it's easy to fall into the trap of wanting to be too clever about prompts and potentially creating imprecise descriptions. It's often better to be specific and direct. The analogy here is very similar to effective communication - the more direct, the more effective the message gets across.
 
 For example, you might be interested in learning the concept of prompt engineering. You might try something like:
 
@@ -226,7 +226,7 @@ For example, you might be interested in learning the concept of prompt engineeri
 Explain the concept of prompt engineering. Keep the explanation short, only a few sentences, and don't be too descriptive.
 ```
 
-It's not clear from the prompt above how many sentences to use and what style. You might still somewhat get good responses with the above prompts but the better prompt would be one that is very specific, concise, and to the point. Something like:
+It's not clear from the prompt above how many sentences to use and what style. You might still get somewhat good responses with the above prompts but the better prompt would be one that is very specific, concise, and to the point. Something like:
 
 ```
 Use 2-3 sentences to explain the concept of prompt engineering to a high school student.
@@ -255,7 +255,7 @@ Here is a better prompt:
 
 *Prompt:*
 ```
-The following is an agent that recommends movies to a customer. The agent is responsible to recommend a movie from the top global trending movies. It should refrain from asking users for their preferences and avoid asking for personal information. If the agent doesn't have a movie to recommend, it should respond "Sorry, couldn't find a movie to recommend today.".
+The following is an agent that recommends movies to a customer. The agent is responsible for recommending a movie from the top global trending movies. It should refrain from asking users for their preferences and avoid asking for personal information. If the agent doesn't have a movie to recommend, it should respond "Sorry, couldn't find a movie to recommend today.".
 
 Customer: Please recommend a movie based on my interests.
 Agent:

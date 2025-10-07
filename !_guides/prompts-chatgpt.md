@@ -42,7 +42,7 @@ From the example above, you can see two important components:
 - the **intent** or explanation of what the chatbot is
 - the **identity** which instructs the style or tone the chatbot will use to respond
 
-The simple example above works well with the text completion APIs that use `text-davinci-003`. More recently, OpenAI [announced the ChatGPT APIs](https://openai.com/blog/introducing-chatgpt-and-whisper-apis), which is a more powerful and cheaper model called `gpt-3.5-turbo` was specifically built for this type of functionality (chat completions). OpenAI recommends this as their best model even for non-chat use cases. Other benefits of using the ChatGPT APIs are significant cost reduction (90%) and efficiency.
+The simple example above works well with the text completion APIs that use `text-davinci-003`. More recently, OpenAI [announced the ChatGPT APIs](https://openai.com/blog/introducing-chatgpt-and-whisper-apis), for which a more powerful and cheaper model called `gpt-3.5-turbo` was specifically built for this type of functionality (chat completions). OpenAI recommends this as their best model even for non-chat use cases. Other benefits of using the ChatGPT APIs are significant cost reduction (90%) and efficiency.
 
 Big companies like Snap Inc. and Instacart are already integrating conversational features powered by ChatGPT on their products that range from personalized recommendations to open-ended shopping goals.
 

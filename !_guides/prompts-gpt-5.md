@@ -74,8 +74,8 @@ These tags control the agent's autonomy, persistence, and research methodology.
   - Commands to not halt or ask for clarification unless absolutely necessary.
   - Clear definition of the "completion state" for the task.
 - **Anti-Patterns (What to Avoid):**
-  - Using this tag for tasks that inherently require iterative user feedback and collaboration.
-  - Combining it with instructions that require frequent user confirmation, as this creates a logical conflict.
+  - Avoid using this tag for tasks that inherently require iterative user feedback and collaboration.
+  - Avoid combining it with instructions that require frequent user confirmation, as this creates a logical conflict.
 
 #### **2.3.2 `<context_gathering>`**
 - **Purpose:** To define the rules for the agent's initial information-gathering and research phase.
@@ -84,7 +84,7 @@ These tags control the agent's autonomy, persistence, and research methodology.
   - Criteria for "early stopping" (i.e., when enough information has been gathered).
   - Rules for parallelization and deduplication of search efforts.
 - **Anti-Patterns (What to Avoid):**
-  - Overly restrictive rules that prevent necessary exploration, or overly loose rules that lead to "analysis paralysis."
+  - Avoid overly restrictive rules that prevent necessary exploration, or overly loose rules that lead to "analysis paralysis."
 
 #### **2.3.3 `<exploration>`**
 - **Purpose:** Similar to `<context_gathering>`, but more focused on understanding an existing environment (like a codebase or document structure) rather than open-ended research.
@@ -92,7 +92,7 @@ These tags control the agent's autonomy, persistence, and research methodology.
   - Directives to map out the structure of the environment.
   - Commands to identify dependencies and key components before taking action.
 - **Anti-Patterns (What to Avoid):**
-  - Requesting exhaustive exploration of vast environments, which is inefficient. Focus on targeted exploration.
+  - Avoid requesting exhaustive exploration of vast environments, which is inefficient. Focus on targeted exploration.
 
 #### **2.3.4 `<context_understanding>`**
 - **Purpose:** To provide a higher-level strategy for balancing the use of internal knowledge versus external tools/exploration.
